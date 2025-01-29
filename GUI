@@ -75,8 +75,8 @@ CREDITS :D
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "Exo's reanimtions & EMOTER V2.4";
-	Text = "Exo's reanimtions mixed with EMOTER V2.4 /// powered by patchma made by DeBug-X Team & shavine";
+	Title = "HackerMan Hub Loaded";
+	Text = "Made By DeBug-X Team with many other huds and animations > check console for more info";
 	Icon = "http://www.roblox.com/asset/?id=116575803526703";
 	Duration = "15"
 
