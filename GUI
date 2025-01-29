@@ -19,8 +19,8 @@ warn[[
 	Shackluster's Knife: 7170680556
 
 	IDs of paid body accessories:
-	-for arms 11159410305,11263254795 / 14255556501,14255554762 / 12344545199,12344591101 / 13839976999,13831200263
-	-for legs 14768693948,14768701869 / 11159483910,12652786974 / 17401151565,17387616772
+	-for arms and are in sets of 2 > 11159410305,11263254795 / 14255556501,14255554762 / 12344545199,12344591101 / 13839976999,13831200263
+	-for legs and are in sets of 2 > 14768693948,14768701869 / 11159483910,12652786974 / 17401151565,17387616772
 	-for torso 14255528083 / 13421786478 / 14768678294
 
 	or anything else that covers ur torso. examples:
@@ -48,6 +48,8 @@ CREDITS :D
 > DeBug-Z        | Coder & Tester
     Emoter % so sigma kustom Team
 > Shavine        | Animator
+    Hiso Hub Team
+> Hiso           | Animator & Coder & Tester
     Shade Hub ReBorn Team
 > Chip           | Animator & Coder
 > Maximilito     | Animator
@@ -72,6 +74,12 @@ CREDITS :D
 > added shade hub Reborn
 ? fixed hub name and makers name not being the same colors
 ^ changed how the the info is sent to your console
+    Update v3
+> Added Hiso Hub
+> Added Destroy GUI button
+> Added Rejoin button
+> Added Reset button
+^ small changes to the notification
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
@@ -13743,17 +13751,17 @@ btn("Destroy UI",function()
     stopreanimate()
 end).TextColor3=c3(0.8,0,0)
 
-btn("Rejoin",function()
+btn("Rejoin Game",function()
 	local ts = game:GetService("TeleportService")
 	local p = game:GetService("Players").LocalPlayer
 	ts:Teleport(game.PlaceId, p)
 end).TextColor3=c3(0.8,0,0)
 
-btn("Reset",function()
+btn("Reset True char",function()
 	stopreanimate()
 end).TextColor3=c3(0.8,0,0)
 
-insSet(btn("stop current script",stopreanimate),"TextColor3",c3(1,0,0))
+insSet(btn("stop animation",stopreanimate),"TextColor3",c3(1,0,0))
 
 lbl("--------------------SETTINGS (REANIMATE TO APPLY)--------------------")
 
