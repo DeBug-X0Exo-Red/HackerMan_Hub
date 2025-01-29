@@ -77,7 +77,7 @@ CREDITS :D
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Exo's reanimtions & EMOTER V2.4";
 	Text = "Exo's reanimtions mixed with EMOTER V2.4 /// powered by patchma made by DeBug-X Team & shavine";
-	Icon = "http://www.roblox.com/asset/?id=15748821008";
+	Icon = "http://www.roblox.com/asset/?id=92111903550970";
 	Duration = "15"
 
 	})
