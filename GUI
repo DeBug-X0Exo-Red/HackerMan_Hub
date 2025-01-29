@@ -4707,7 +4707,7 @@ end)
 lbl("^^^ by shavine ^^^").TextColor3=c3(0.45,1,0.50)
 lbl("version = 2.4").TextColor3=c3(50,50,50)
 lbl("------------------------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
-lbl("Hiso Hub").TextColor3=c3(0.4,0,0)
+lbl("Hiso Hub").TextColor3=c3(0.5,0,0)
 btn("jetpack", function()
 	local t=reanimate()
 	if type(t)~="table" then return end
@@ -6323,7 +6323,7 @@ LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.2+0.5*sin((sine + 5)*9),-0.5 * sin(sine*9))*
 		end
     })
 end)
-lbl("^^^ By Hiso ^^^").TextColor3=c3(0.4,0,0)
+lbl("^^^ By Hiso ^^^").TextColor3=c3(0.5,0,0)
 lbl("Version = unknown").TextColor3=c3(0,0,0)
 lbl("------------------------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
 lbl("Shade Hub Reborn").TextColor3=c3(0.65,0,0.85)
