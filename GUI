@@ -78,7 +78,7 @@ game.StarterGui:SetCore("SendNotification", {
 	Title = "HackerMan Hub Loaded";
 	Text = "Made By DeBug-X Team with many other huds and animations > check console for more info";
 	Icon = "http://www.roblox.com/asset/?id=116575803526703";
-	Duration = "15"
+	Duration = "35"
 
 	})
 
