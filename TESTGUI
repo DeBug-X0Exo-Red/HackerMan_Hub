@@ -40,7 +40,7 @@ DO NOT REPORT BUGS ON THIS VERSION
     TEST VERSION HackerMan Hub Info
 patchma Version > v43
 Hub Version > v3
-TEST Hub Version > v3.1
+TEST Hub Version > v3.4
 Animations > 45+
 Makers of Hub > DeBug-X Team
 =======================================================================================================================================
@@ -86,7 +86,7 @@ CREDITS :D
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "HackerMan Hub Loaded";
+	Title = "V=Test HackerMan Hub Loaded";
 	Text = "Made By DeBug-X Team with many other huds and animations > check console for more info";
 	Icon = "http://www.roblox.com/asset/?id=116575803526703";
 	Duration = "35"
