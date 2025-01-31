@@ -6672,22 +6672,23 @@ btn("Star Glitcher", function()
 			AccessoryWeld1.C0=AccessoryWeld1.C0:Lerp(cf(-1.15,3.5,-1.5)*angles(0,0,-1.4835298641951802-0.2617993877991494*sin((sine+1)*1.5)),deltaTime) 
 			AccessoryWeld2.C0=AccessoryWeld2.C0:Lerp(cf(-0.5,2.5,-1.5)*angles(0,0,-1.3089969389957472-0.2617993877991494*sin((sine+1.25)*1.5)),deltaTime) 
 			AccessoryWeld3.C0=AccessoryWeld3.C0:Lerp(cf(2.5,-0.5,-1.5)*angles(0,0,-0.4363323129985824+0.2617993877991494*sin((sine+1.25)*1.5)),deltaTime) 
+
 		end,
 		walk = function()
 
 
 
-			t.setWalkSpeed(24)
-			RootJoint.C0=RootJoint.C0:Lerp(cf(0.1 * sin(sine*5),-0.1+0.1*sin((sine + 0.4)*10),0.1 * sin((sine+0.3)*10))*angles(-1.9198621771937625+0.08726646259971647*sin((sine+0.2)*10),0.08726646259971647*sin(sine*5),3.141592653589793+0.08726646259971647*sin(sine*5)),deltaTime) 
-			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,0.5 * sin((sine+0.6)*10))*angles(1.2217304763960306*sin((sine+0.5)*-10),1.5707963267948966+0.17453292519943295*sin((sine+0.7)*-10),0),deltaTime) 
-			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.75*sin((sine + 0.3)*-10),-0.15+0.7*sin((sine - 1.3)*-10))*angles(-1.6144295580947547+1.0471975511965976*sin((sine+1.74)*10),1.5707963267948966+0.04363323129985824*sin(sine*-5),1.5707963267948966),deltaTime) 
-			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.08726646259971647*sin((sine+0.2)*-10),0.08726646259971647*sin(sine*-5),3.141592653589793+0.08726646259971647*sin(sine*-5)),deltaTime) 
-			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1+0.5*sin((sine + 0.3)*10),-0.15+0.7*sin((sine - 2.2)*-10))*angles(1.5271630954950384+1.0471975511965976*sin((sine+1.74)*-10),-1.5707963267948966-0.04363323129985824*sin(sine*-5),1.5707963267948966),deltaTime) 
-			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.6)*-10))*angles(1.2217304763960306*sin((sine+0.5)*10),-1.5707963267948966+0.17453292519943295*sin((sine+0.7)*10),0),deltaTime) 
-			AccessoryWeld.C0=AccessoryWeld.C0:Lerp(cf(3.5,-1.15,-1.5)*angles(0,0,-0.2181661564992912+0.2617993877991494*sin((sine+1)*1.5)),deltaTime) 
-			AccessoryWeld1.C0=AccessoryWeld1.C0:Lerp(cf(-1.15,3.5,-1.5)*angles(0,0,-1.4835298641951802-0.2617993877991494*sin((sine+1)*1.5)),deltaTime) 
-			AccessoryWeld2.C0=AccessoryWeld2.C0:Lerp(cf(-0.5,2.5,-1.5)*angles(0,0,-1.3089969389957472-0.2617993877991494*sin((sine+1.25)*1.5)),deltaTime) 
-			AccessoryWeld3.C0=AccessoryWeld3.C0:Lerp(cf(2.5,-0.5,-1.5)*angles(0,0,-0.4363323129985824+0.2617993877991494*sin((sine+1.25)*1.5)),deltaTime) 
+			t.setWalkSpeed(64)
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0.2 * sin((sine+0.5)*3),4+0.5*sin(sine*3),0.6 * sin((sine-0.5)*-3))*angles(-2.0943951023931953+0.08726646259971647*sin((sine+0.5)*3),-0.08726646259971647+0.08726646259971647*sin((sine+0.5)*3),2.0943951023931953),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1,0.1)*angles(-1.2217304763960306+0.08726646259971647*sin((sine+0.5)*3),0.6981317007977318,0.6981317007977318),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.2617993877991494*sin(sine*1),0.2617993877991494*sin(sine*1),4.363323129985824),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1.4,0,-0.5)*angles(-0.5235987755982988,-0.5235987755982988,-0.8726646259971648),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,0,-1)*angles(2.443460952792061+0.17453292519943295*sin((sine+0.5)*3),-2.0943951023931953+0.17453292519943295*sin((sine+0.25)*3),2.792526803190927),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,-0.25,0.5)*angles(-1.5707963267948966,0.8726646259971648,2.0943951023931953),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(-1.5+0.5*sin(sine*1),4.5+0.5*sin((sine+0.5)*-1),-1),angles(0.2617993877991494+0.2617993877991494*sin((sine-0.4)*1),0,-1.4835298641951802+0.3490658503988659*sin((sine+0.4)*1))),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(0.5 * sin(sine*1),2.5+0.5*sin((sine+0.5)*-1),-1),angles(0.17453292519943295+0.17453292519943295*sin((sine-0.2)*1),0,-1.2217304763960306+0.2617993877991494*sin((sine+0.2)*1))),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(-6+0.5*sin(sine*1),7.6+0.5*sin((sine+0.5)*-1),-1),angles(0.4363323129985824+0.4363323129985824*sin((sine-0.8)*1),0,-1.5707963267948966+0.5235987755982988*sin((sine+0.8)*1))),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(-4+0.5*sin(sine*1),6+0.5*sin((sine+0.5)*-1),-1),angles(0.3490658503988659+0.3490658503988659*sin((sine-0.6)*1),0,-1.4835298641951802+0.4363323129985824*sin((sine+0.6)*1))),deltaTime) 
 		end
 	})
 	addmode("g", {
