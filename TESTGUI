@@ -8805,7 +8805,7 @@ btn("Infinity Glitcher", function()
 	local RightHip=getJoint("Right Hip")
 	local LeftHip=getJoint("Left Hip")
 	local Neck=getJoint("Neck")
-	sjp(0)
+	SJP(0)
 	addmode("default", {
 		idle = function()
 			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*-1.5),-0.75+0.175*sin((sine + 0.75)*-1.5),-0.1+0.1*sin(sine*-1.5))*angles(-0.3490658503988659,-1.0471975511965976,-0.8726646259971648+0.1308996938995747*sin((sine-0.5)*1.5)),deltaTime) 
