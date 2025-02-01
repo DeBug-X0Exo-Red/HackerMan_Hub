@@ -13746,7 +13746,7 @@ lbl("By MyWorld").TextColor3=c3(0,0,1)
 lbl("verions = 43.0").TextColor3=c3(1,1,1)
 lbl("-------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
 lbl("DeBug-X MODS").TextColor3=c3(0.35,0,0)
-btn("Star Glitcher", function()
+btn("shade hub >>> MODDED <<< Star Glitcher", function()
 	local t=reanimate()
 	local addmode=t.addmode
 	local getJoint=t.getJoint
@@ -14072,7 +14072,7 @@ btn("Star Glitcher", function()
 		end
 	})
 end)
-lbl("By DeBug-X Team").TextColor3=c3(0.35,0,0)
+lbl("^^^ By DeBug-X Team ^^^").TextColor3=c3(0.35,0,0)
 lbl("verison = 1").TextColor3=c3(1,1,1)
 lbl("------------------------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
 lbl("Misc").TextColor3=c3(1,1,1)
