@@ -14086,9 +14086,9 @@ btn("Shade Hub >>> MODDED <<< Moony Glitcher V3", function()
 	local RightHip=getJoint("Right Hip")
 	local LeftHip=getJoint("Left Hip")
 	local Neck=getJoint("Neck")
-	local one = getPartFromMesh(7535284433,7535284516)
+	local one = getPartFromMesh(4315410540,4506940486)
 	local one = getPartJoint(one)
-	local two = getPartFromMesh(5295165330,5316516435)
+	local two = getPartFromMesh(4315410540,4794299274)
 	local two = getPartJoint(two)
 
 	addmode("default", {
