@@ -2,11 +2,12 @@ warn[[ by debug-x team we have updated many animations and animation hubs to the
 btw new legs and arms from genesis will be added with time noob rig works
 runs on patchma what else?
 
--> WARNING <- THIS IS A TEST VERSION OF "HackerMan Hub" BY USING THIS YOU KNOW THERE WILL BE BUGS UNTESTED VERSIONS OF SCRIPTS AND MORE
+-> WARNING <- THIS IS A TEST VERSION OF "HackerMan Hub" 
+BY USING THIS YOU KNOW THERE WILL BE BUGS UNTESTED VERSIONS OF SCRIPTS AND MORE
 ALL ANIMATIONS AND CODE/SCRIPT CHANGES ARE NOT 100% GOING TO GO TO THE FINAL VERSION
 DO NOT REPORT BUGS ON THIS VERSION
 =======================================================================================================================================
-HackerMan Valk used in/on char showned before <-> IS NOT NEEDED AT ALL FOR ANYTHING JUST A ITEM I LIKE _Random Dev
+HackerMan Valk used in/on char showned before <-> IS NOT NEEDED AT ALL FOR ANYTHING JUST A ITEM I LIKE AND NO IM NOT THE MAKER OF THE VALK ITEM _Random Dev
 https://www.roblox.com/catalog/83171210934166/Red-Valk
 =======================================================================================================================================
 		Hiso-Hub hats
@@ -44,30 +45,30 @@ https://www.roblox.com/catalog/83171210934166/Red-Valk
 	wings: 17270231731,17270225913
 	sword: 17326812233,17326800544
 =======================================================================================================================================
-    TEST VERSION HackerMan Hub Info
+    HackerMan Hub Info
 patchma Version > v43
-Hub Version > v3
-TEST Hub Version > v3.9
-Animations > 55+
+Hub Version > v4
+Test Hub Version v4.1
+Animations > 65+
 Makers of Hub > DeBug-X Team
 =======================================================================================================================================
 CREDITS :D
-    DeBug-x Team
+    DeBug-x Team / 12 animations used
 > Exotic         | Animator & Tester
 > DeBug-X        | Coder
 > DeBug-Z        | Coder & Tester
-    Emoter % so sigma kustom Team
+    Emoter & so sigma kustom Team / 8 animations used 
 > Shavine        | Animator
-    Hiso Hub Team
+    Hiso Hub Team / 17 animations
 > Hiso           | Animator & Coder & Tester
-    Shade Hub ReBorn Team
+    Shade Hub ReBorn Team / 20 aimations used
 > Chip           | Animator & Coder
 > Maximilito     | Animator
-    Patchma Hub Team | for Patchma hub itself
+    Patchma Hub Team | for Patchma hub itself / 8 animations used
 > Fox            | Maker of the watered down version of MyWorld's place
 > MyWorld        | Animator & Coder & Tester | Creator of patchma hub
 > Emper          | Animator & Coder & Tester | Helper who continued patchma hub for a temp time 
-    Genesis Fe Team | for the ideas 
+    Genesis Fe Team | for the ideas / 0 animations used
 > Mikayala       | Unknown | A Owner and maker of Genesis Fe
 > Rqz            | Unknown | A Owner and maker of Genesis Fe
 > Chip           | Animator & Coder | No longer works with and or for Genesis Fe
@@ -90,11 +91,17 @@ CREDITS :D
 > Added Rejoin button
 > Added Reset button
 ^ small changes to the notification
+update v4
+> added more info in console
+> added DeBug-X MODS for modder versions of other animations mostly just item changes but yes
+> added Modded version of star glitcher from shade hub
+> added Modded version of moony glitcher from shade hub
+? fixed Hiso Hub version text being black rather then white like the rest
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "V=Test HackerMan Hub Loaded";
-	Text = "Made By DeBug-X Team with many other huds and animations > check console for more info";
+	Title = "V-TEST HackerMan Hub Loaded";
+	Text = "Made By DeBug-X Team with many other hubs and animations > check console for more info";
 	Icon = "http://www.roblox.com/asset/?id=116575803526703";
 	Duration = "35"
 
@@ -231,7 +238,7 @@ local Inverse=cfGet(cf_0,"Inverse")
 local Lerp=cfGet(cf_0,"Lerp")
 
 local guiTheme={
-	guiTitle="V-TEST HackerMan Hub",
+	guiTitle="HackerMan Hub",
 	windowTitleColor=c3(0,0.5,0),
 	windowTopColor=c3(0,0,0),
 	windowBottomColor=c3(1,1,1),
@@ -14055,6 +14062,7 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(2.3,2.3,-1),angles(0,0.2617993877991494,0.7853981633974483+0.08726646259971647*sin((sine+0.5)*2))),deltaTime) 
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(2.3,2.3,-1),angles(0,-0.2617993877991494,3.141592653589793+0.17453292519943295*sin(sine*2))),deltaTime) 
 		end,
+	})
 		walk = function()
 
 
@@ -14069,6 +14077,30 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(2.3,2.3,-1),angles(0,-0.2617993877991494,-2.356194490192345+0.17453292519943295*sin(sine*2))),deltaTime) 
 			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(2.3,2.3,-1),angles(0,0.2617993877991494,0.7853981633974483+0.08726646259971647*sin((sine+0.5)*2))),deltaTime) 
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(2.3,2.3,-1),angles(0,-0.2617993877991494,3.141592653589793+0.17453292519943295*sin(sine*2))),deltaTime) 
+	addmode("k", {
+		idle = function()
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*-1.5),-0.75+0.175*sin((sine + 0.75)*-1.5),-0.1+0.1*sin(sine*-1.5))*angles(-0.3490658503988659,-1.0471975511965976,-0.8726646259971648+0.1308996938995747*sin((sine-0.5)*1.5)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.25+0.2*sin((sine + 0.75)*1.5),0.2+0.2*sin((sine - 0.5)*1.5))*angles(-1.9198621771937625+0.1308996938995747*sin((sine-0.5)*1.5),-0.08726646259971647,2.6179938779914944),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.1 * sin((sine+1)*1.5),0)*angles(-1.3962634015954636,1.1344640137963142+0.17453292519943295*sin((sine-0.25)*-1.5),1.3962634015954636),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.8,0)*angles(-1.0471975511965976+0.17453292519943295*sin((sine-0.5)*-1.5),-0.5235987755982988+0.04363323129985824*sin(sine*-1.5),2.007128639793479),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.1308996938995747*sin((sine-0.5)*-1.5),0.17453292519943295+0.04363323129985824*sin(sine*-1.5),3.6651914291880923),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(0.9+0.025*sin((sine + 1)*-1.5),-1.3+0.225*sin((sine + 1)*-1.5),-0.5+0.075*sin(sine*-1.5))*angles(0.5235987755982988,2.0943951023931953,-0.7853981633974483+0.1308996938995747*sin((sine-0.5)*-1.5)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(-2,4,0),angles(0,0,-1.1344640137963142+0.3490658503988659*sin((sine+0.4)*1))),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(-1,2,0),angles(0,0,-0.9599310885968813+0.2617993877991494*sin((sine+0.2)*1))),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(-3,6,0),angles(0,0,-1.3089969389957472+0.4363323129985824*sin((sine+0.6)*1))),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(-4,8,0),angles(0,0,-1.4835298641951802+0.5235987755982988*sin((sine+0.8)*1))),deltaTime) 
+		end,
+		walk = function()
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(-2,4,0),angles(0,0,-1.1344640137963142+0.3490658503988659*sin((sine+0.4)*1))),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(-1,2,0),angles(0,0,-0.9599310885968813+0.2617993877991494*sin((sine+0.2)*1))),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(-3,6,0),angles(0,0,-1.3089969389957472+0.4363323129985824*sin((sine+0.6)*1))),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(-4,8,0),angles(0,0,-1.4835298641951802+0.5235987755982988*sin((sine+0.8)*1))),deltaTime) 
 		end
 	})
 end)
@@ -14086,9 +14118,9 @@ btn("Shade Hub >>> MODDED <<< Moony Glitcher V3", function()
 	local RightHip=getJoint("Right Hip")
 	local LeftHip=getJoint("Left Hip")
 	local Neck=getJoint("Neck")
-	local one = getPartFromMesh(4315410540,4506940486)
+	local one = getPartFromMesh(4315410540,4458626951)
 	local one = getPartJoint(one)
-	local two = getPartFromMesh(4315410540,4794299274)
+	local two = getPartFromMesh(4315410540,4315250791)
 	local two = getPartJoint(two)
 
 	addmode("default", {
