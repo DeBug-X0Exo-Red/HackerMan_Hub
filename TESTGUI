@@ -14080,6 +14080,7 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 	})
 	addmode("i", {
 		idle = function()
+
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0,0.1 * sin(sine*2),0.2 * sin(sine*2))*angles(-1.5707963267948966+0.08726646259971647*sin(sine*-2),0,2.9670597283903604),deltaTime) 
 			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.75,-0.25+0.25*sin((sine - 0.5)*2),0)*angles(0.2617993877991494*sin((sine-0.5)*-2),2.792526803190927,1.5707963267948966),deltaTime) 
 			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*-2),-1+0.095*sin(sine*-2),-0.1+0.25*sin(sine*-2))*angles(-0.5235987755982988+0.10471975511965978*sin(sine*2),-1.3526301702956054,-0.4188790204786391),deltaTime) 
@@ -14091,9 +14092,11 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(0,10+3*sin((sine+486781)*1),0),angles(17453292.502490003*sin((sine+26)*6e-07),17453292.502490003*sin((sine+775)*3e-07),17453292.502490003*sin((sine+9)*2e-07))),deltaTime) 
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(0,10+3*sin((sine+745)*1),0),angles(17453292.502490003*sin((sine+5621)*4e-07),17453292.502490003*sin((sine+73)*9e-07),17453292.502490003*sin((sine+29)*3e-07))),deltaTime)
 		end,
+
 		walk = function()
+
 			t.setWalkSpeed(16)
-						LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
 			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
@@ -14105,6 +14108,7 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(0,10+3*sin((sine+745)*1),0),angles(17453292.502490003*sin((sine+5621)*4e-07),17453292.502490003*sin((sine+73)*9e-07),17453292.502490003*sin((sine+29)*3e-07))),deltaTime)
 		end
 	})
+
 	addmode("q", {
 		idle = function()
 
@@ -14121,6 +14125,7 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 		end,
 
 		walk = function()
+
 			t.setWalkSpeed(12)
 			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.1*sin((sine + 0.1)*5),0.2 * sin((sine-0.1)*-5))*angles(0.17453292519943295*sin((sine-0.8)*-5),1.5707963267948966+0.3490658503988659*sin(sine*5),0.5235987755982988*sin((sine-0.2)*5)),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7016960206944713+0.04363323129985824*sin((sine-0.5)*7.5),0,3.141592653589793+0.04363323129985824*sin(sine*-5)),deltaTime) 
@@ -14135,7 +14140,6 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 		end
 	})
 end)
-
 btn("Shade Hub >>> MODDED <<< Moony Glitcher V3", function()
 	local t=reanimate()
 	if type(t)~="table" then return end
