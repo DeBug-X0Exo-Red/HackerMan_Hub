@@ -47,8 +47,7 @@ https://www.roblox.com/catalog/83171210934166/Red-Valk
 =======================================================================================================================================
     HackerMan Hub Info
 patchma Version > v43
-Hub Version > v4
-Test Hub Version v4.1
+Hub Version > v5
 Animations > 65+
 Makers of Hub > DeBug-X Team
 =======================================================================================================================================
@@ -86,17 +85,31 @@ CREDITS :D
 ? fixed hub name and makers name not being the same colors
 ^ changed how the the info is sent to your console
     Update v3
-> Added Hiso Hub
-> Added Destroy GUI button
-> Added Rejoin button
-> Added Reset button
+> added Hiso Hub
+> added Destroy GUI button
+> added Rejoin button
+> added Reset button
 ^ small changes to the notification
-update v4
+	update v4
 > added more info in console
 > added DeBug-X MODS for modder versions of other animations mostly just item changes but yes
 > added Modded version of star glitcher from shade hub
 > added Modded version of moony glitcher from shade hub
 ? fixed Hiso Hub version text being black rather then white like the rest
+	update v5
+> added 3 more modes to modded star glitcher from shade hub
+? fixed small problem not known for some reason
+< removed Test changing the text and a few other things to make it more easy with bringing the test version over to the main version (if you dont use the test version you wont care)
+^ chnaged a few background things i think i forgot
+=======================================================================================================================================
+			comming soon
+more modded star glitcher from shade hub modes
+better ui
+hat drop mode
+200 under map mode
+hating my life less fr fr
+more rigs when i care lol or when someone ask
+some other things
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
