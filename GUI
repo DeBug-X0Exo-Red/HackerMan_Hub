@@ -7628,7 +7628,7 @@ btn("Andrfix Studio Dummy", function()
 	local RightHip=getJoint("Right Hip")
 	local LeftHip=getJoint("Left Hip")
 	local Neck=getJoint("Neck")
-	local AccessoryWeld = getPartFromMesh(5164176566,5164167965)
+	local AccessoryWeld = getPartFromMesh(4615369575,4615393635)
 	local AccessoryWeld = getPartJoint(AccessoryWeld)
 	local cframes=t.cframes
 	local rootpart1=t.getPart("HumanoidRootPart")
