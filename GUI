@@ -14117,6 +14117,35 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(0,10+3*sin((sine+745)*1),0),angles(17453292.502490003*sin((sine+5621)*4e-07),17453292.502490003*sin((sine+73)*9e-07),17453292.502490003*sin((sine+29)*3e-07))),deltaTime)
 		end
 	})
+	addmode("p", {
+		idle = function()
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.8325957145940461+0.05235987755982989*sin((sine-0.25)*2),-0.08726646259971647,3.3161255787892263),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.95+0.125*sin(sine*-2),-0.5+0.2*sin((sine + 0.75)*2))*angles(-0.08726646259971647+0.08726646259971647*sin((sine-0.5)*-2),-1.2217304763960306,0.1308996938995747),deltaTime)  
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.3+0.15*sin(sine*2),0.1 * sin((sine-0.5)*-2))*angles(-1.3962634015954636+0.08726646259971647*sin((sine-0.5)*-2),0.04363323129985824,2.9670597283903604),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.8,-0.25+0.1*sin((sine + 1)*2),0)*angles(0,-2.792526803190927,-1.6144295580947547+0.08726646259971647*sin((sine+1.75)*2)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.7,0.15+0.1*sin((sine + 1)*2),0)*angles(0,2.9670597283903604,1.7453292519943295+0.08726646259971647*sin((sine+1.75)*-2)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.15*sin(sine*-2),-0.75+0.1*sin((sine - 0.5)*-2))*angles(1.5707963267948966+0.05235987755982989*sin((sine-0.25)*-2),2.007128639793479,-2.0943951023931953),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(6,6,0),angles(1.5707963267948966+0.17453292519943295*sin((sine+2)*4),-1.5707963267948966+17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(6,6,0),angles(-1.5707963267948966+0.17453292519943295*sin((sine+1)*4),17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(6,6,0),angles(1.5707963267948966+0.17453292519943295*sin((sine+0.5)*4),17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(6,6,0),angles(-1.5707963267948966+0.17453292519943295*sin((sine+1.5)*4),1.5707963267948966+17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+		end,
+
+		walk = function()
+
+			t.setWalkSpeed(16)
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(6,6,0),angles(1.5707963267948966+0.17453292519943295*sin((sine+2)*4),-1.5707963267948966+17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(6,6,0),angles(-1.5707963267948966+0.17453292519943295*sin((sine+1)*4),17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(6,6,0),angles(1.5707963267948966+0.17453292519943295*sin((sine+0.5)*4),17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(6,6,0),angles(-1.5707963267948966+0.17453292519943295*sin((sine+1.5)*4),1.5707963267948966+17453292.502490003*sin(sine*5e-07),0)),deltaTime) 
+		end
+	})
 
 	addmode("o", {
 		idle = function()
