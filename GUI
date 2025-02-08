@@ -14444,6 +14444,8 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 	local Neck=getJoint("Neck")
 	local AccessoryWeld = getPartFromMesh(4615369575,4615393635)
 	local AccessoryWeld = getPartJoint(AccessoryWeld)
+	local TestWeld = getPartFromMesh(4307568890,4307568951)
+	local TestWeld = getPartJoint(TestWeld)
 	local cframes=t.cframes
 	local rootpart1=t.getPart("HumanoidRootPart")
 	local rootpart=t.getPart("Head")
@@ -14535,6 +14537,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 				RightHip.C0=RightHip.C0:Lerp(cf(1.2,0,-0.6)*angles(0.8726646259971648,1.3089969389957472,-0.8726646259971648),deltaTime) 
 				LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.5,0)*angles(-1.2217304763960306,-1.2217304763960306,-1.2217304763960306),deltaTime) 
 				LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1,0)*angles(-0.8726646259971648,-1.3089969389957472,-0.8726646259971648),deltaTime) 
+				TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,33+100*sin(sine*35),0),angles(0.08726646259971647*sin((sine+23)*9999),0,0.08726646259971647*sin((sine+27)*9999))),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.2)
@@ -14546,6 +14549,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 				RightHip.C0=RightHip.C0:Lerp(cf(1.2,0,-0.6)*angles(0.8726646259971648,1.3089969389957472,-0.8726646259971648),deltaTime) 
 				LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.5,0)*angles(-1.2217304763960306,-1.2217304763960306,-1.2217304763960306),deltaTime) 
 				LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1,0)*angles(-0.8726646259971648,-1.3089969389957472,-0.8726646259971648),deltaTime) 
+				TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,33+100*sin(sine*35),0),angles(0.10471975511965978+0.08726646259971647*sin((sine+23)*9999),0,0.08726646259971647*sin((sine+27)*9999))),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.2)
@@ -14560,6 +14564,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 				Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.6231562043547265,0.03490658503988659,2.8797932657906435),deltaTime) 
 				RootJoint.C0=RootJoint.C0:Lerp(cf(0,0,0)*angles(-1.5707963267948966,0,3.3161255787892263),deltaTime) 
 				AccessoryWeld.C0=AccessoryWeld.C0:Lerp(cf(0.75,-2.25,1.5)*angles(-1.2217304763960306,2.6179938779914944,1.2217304763960306),deltaTime) 
+				TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,33+100*sin(sine*35),0),angles(0.08726646259971647*sin((sine+23)*9999),0,0.08726646259971647*sin((sine+27)*9999))),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.3)
@@ -14571,7 +14576,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 				Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.6231562043547265,0.03490658503988659,2.8797932657906435),deltaTime) 
 				RootJoint.C0=RootJoint.C0:Lerp(cf(0,0,0)*angles(-1.5707963267948966,0,3.3161255787892263),deltaTime) 
 				AccessoryWeld.C0=AccessoryWeld.C0:Lerp(cf(0.75,-2.25,1.25)*angles(-1.1344640137963142,2.0943951023931953,1.3089969389957472),deltaTime) 
-				--MW_animatorProgressSave: LeftLeg,-1,0,0,1,-50,0,0,1,-1.1,0,0,1,-75,0,0,1,0,0,0,1,-52.5,0,0,1,RightArm,1,0,0,1,3,0,0,1,0.5,0,0,1,75,0,0,1,0,0,0,1,110,0,0,1,RightLeg,1,0,0,1,-50,0,0,1,-1.1,0,0,1,75,0,0,1,0,0,0,1,52.5,0,0,1,LeftArm,-1,0,0,1,-75,0,0,1,0.35,0,0,1,-70,0,0,1,0,0,0,1,-75,0,0,1,Head,0,0,0,1,-93,0,0,1,1,0,0,1,2,0,0,1,0,0,0,1,165,0,0,1,Torso,0,0,0,1,-90,0,0,1,0,0,0,1,-0,0,0,1,0,0,0,1,190,0,0,1,Meshes/SniperAccessory_Handle,0.75,0,0,1,-65,0,0,1,-2.25,0,0,1,120,0,0,1,1.25,0,0,1,75,0,0,1
+				TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,33+100*sin(sine*35),0),angles(0.10471975511965978+0.08726646259971647*sin((sine+23)*9999),0,0.08726646259971647*sin((sine+27)*9999))),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.2)
@@ -14594,6 +14599,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,0)*angles(-2.0943951023931953,1.2217304763960306,1.3089969389957472),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(0.8+0.05*sin((sine - 0.125)*-2),-0.5+0.1*sin((sine + 0.125)*-2),-0.5+0.0325*sin((sine - 0.5)*-2))*angles(0.04363323129985824*sin((sine+0.5)*2),1.0471975511965976+0.008726646259971648*sin((sine+0.5)*2),0.4363323129985824+0.013089969389957472*sin((sine+0.5)*-2)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.25,-0.8)*angles(2.2689280275926285,-2.443460952792061,-0.6108652381980153+0.061086523819801536*sin(sine*2)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -14606,6 +14612,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.5,-0.3 * sin((sine+0.05)*7))*angles(0.7853981633974483*sin(sine*7),-1.5707963267948966,0),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.4835298641951802+0.05235987755982989*sin((sine+0.75)*7),0,3.141592653589793),deltaTime) 
 			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1+0.75*sin(sine*7),0.5 * sin((sine+0.25)*7))*angles(-1.0471975511965976*sin((sine+0.25)*7),-1.5707963267948966,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -14622,6 +14629,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.25,-0.5+0.1*sin((sine + 0.5)*2))*angles(-0.9599310885968813+0.2617993877991494*sin((sine+0.5)*-2),-1.2217304763960306+0.1308996938995747*sin((sine+0.75)*2),-0.6981317007977318),deltaTime) 
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0.25 * sin(sine*2),2+0.5*sin((sine - 0.5)*2),0.25 * sin((sine+0.75)*-2))*angles(0.3490658503988659+0.10471975511965978*sin(sine*2),1.9198621771937625+0.20943951023931956*sin((sine+0.5)*-2),-3.7524578917878086+0.08726646259971647*sin(sine*2)),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.2689280275926285+0.08726646259971647*sin((sine+0.325)*-2),0,1.9198621771937625+0.08726646259971647*sin(sine*-2)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		walk = function()
@@ -14634,6 +14642,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -14649,6 +14658,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			RightHip.C0=RightHip.C0:Lerp(cf(1,0.1 * sin((sine+0.5)*-3),-0.5)*angles(-0.6981317007977318+0.17453292519943295*sin((sine+0.5)*-3),1.0471975511965976+0.08726646259971647*sin(sine*-3),0.3490658503988659+0.17453292519943295*sin((sine-1.25)*3)),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.0943951023931953+0.08726646259971647*sin((sine+0.325)*3),0.2181661564992912+0.04363323129985824*sin((sine+0.325)*-3),2.6179938779914944),deltaTime) 
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0.1 * sin(sine*1.5),4+0.3*sin((sine + 0.25)*-3),0)*angles(-1.2217304763960306+0.08726646259971647*sin((sine+0.75)*3),0.04363323129985824+0.08726646259971647*sin(sine*1.5),3.9269908169872414),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -14662,6 +14672,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -14678,6 +14689,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.8325957145940461+0.08726646259971647*sin((sine+1)*2),0.06981317007977318+0.03490658503988659*sin((sine+1)*-2),2.792526803190927),deltaTime) 
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.175+0.19*sin(sine*2),0.1 * sin((sine+0.6)*-2))*angles(-1.4398966328953218+0.061086523819801536*sin((sine+0.6)*-2),0,3.490658503988659),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.1*sin((sine + 0.75)*-2),0)*angles(-0.8726646259971648,-1.2217304763960306+0.08726646259971647*sin(sine*2),-0.8726646259971648),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
@@ -14696,6 +14708,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			RightHip.C0=RightHip.C0:Lerp(cf(0.9+0.1*sin(sine*-2),-1,0)*angles(-1.0471975511965976+0.08726646259971647*sin((sine+0.75)*2),0.6981317007977318+0.17453292519943295*sin((sine+0.5)*2),0.6981317007977318),deltaTime) 
 			RootJoint.C0=RootJoint.C0:Lerp(cf(0.2 * sin((sine+0.75)*2),4+0.5*sin(sine*2),0.25 * sin((sine+1.75)*2))*angles(-2.0943951023931953+0.08726646259971647*sin((sine+1)*2),-0.2181661564992912+0.08726646259971647*sin((sine+0.75)*2),2.0943951023931953),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 		end,
 		walk = function()
 			if attackAnimation then return attackAnimation() end
@@ -14707,6 +14720,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -14723,6 +14737,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1,0)*angles(-1.0471975511965976+0.08726646259971647*sin((sine+1.125)*-2),-1.2217304763960306,-0.6981317007977318),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.8,0.8,0)*angles(-1.5707963267948966,-0.6981317007977318,1.2217304763960306),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(0.75,-0.25+0.1*sin((sine + 0.325)*-2),-0.25)*angles(-0.6981317007977318,0.8726646259971648,0.5235987755982988+0.08726646259971647*sin((sine+0.75)*-2)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		walk = function()
@@ -14735,6 +14750,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
