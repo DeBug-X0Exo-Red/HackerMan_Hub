@@ -78,18 +78,18 @@ CREDITS :D
 > Chip           | Animator & Coder | No longer works with and or for Genesis Fe
 =======================================================================================================================================
                         update logs
-    update v1
+  	  update v1
 > added Genesis fe noob rig legs and arms
 > added genesis fe rig for newer white arms and legs 
 > added emoter & so sigma kustom | both made by shavine
 ? fixed small bugs with animations not loading when clicked
 ^ changed the gui's colors
 < removed "the ult test" | reason i added it for testing its not needed no more
-    update v2
+   	update v2
 > added shade hub Reborn
 ? fixed hub name and makers name not being the same colors
 ^ changed how the the info is sent to your console
-    Update v3
+    	Update v3
 > added Hiso Hub
 > added Destroy GUI button
 > added Rejoin button
@@ -110,6 +110,18 @@ CREDITS :D
 > added 3 MORE modes to modded start glitcher from shade hub
 > added (https://www.roblox.com/catalog/4504231783/Elemental-Crystal-Golem-Shoulder-Rock) to studio dummy from shade hub in modded version
 > added Modded Pistol from shade hub
+    	update v7
+> added 2 MORE modes to modded start glitcher from shade hub
+> added "Dev Notes" to the warn msg
+> added "Dev Msgs" to the warn msg
+=======================================================================================================================================
+	Dev Msgs [logs from a dc server to the github]
+>>> Im sorry i coudlnt get more done on the hub im just taking forever and adding more hubs is looking hard to do for many reason
+>>> not to talk about how its a bit hard to find hubs to add to the hub
+>>> and 1 more thing im working on finding all the hats for every script its just hard due to me being slow when back searching the id's
+---------------------------------------------------------------------------------------------------------------------------------------
+	Dev Notes
+will being trying to add a new hub within update v8 or v9 if i can an get all the id's by v10 or v11
 =======================================================================================================================================
 			comming soon
 more modded star glitcher from shade hub modes
@@ -14188,6 +14200,64 @@ btn("Shade Hub >>> MODDED <<< Star Glitcher", function()
 			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(3,0,-1),angles(0,0,3.141592653589793+17453292519.925842*sin(sine*1e-09))),deltaTime) 
 			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(3,0,-1),angles(0,0,17453292519.925842*sin(sine*1e-09))),deltaTime) 
 			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(3,0,-1),angles(0,0,-1.5707963267948966+17453292519.925842*sin(sine*1e-09))),deltaTime) 
+		end
+	})
+	addmode("v", {
+		idle = function()
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.15*sin((sine - 0.6)*2),0.1 * sin((sine-0.2)*2))*angles(-1.5707963267948966+0.10471975511965978*sin((sine+0.4)*2),0,3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.9+0.15*sin((sine - 0.5)*-2),-0.2+0.12*sin((sine + 2.5)*-2))*angles(1.0471975511965976+0.10471975511965978*sin((sine+0.4)*-2),-1.6580627893946132,1.1519173063162575),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.3+0.15*sin((sine + 1)*-2),0)*angles(-1.5707963267948966,1.3089969389957472+0.2617993877991494*sin((sine+1.5)*-2),1.5707963267948966+0.08726646259971647*sin(sine*-2)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.3+0.15*sin((sine - 0.5)*2),0)*angles(1.5707963267948966,-1.8325957145940461+0.2617993877991494*sin((sine+1.5)*-2),1.5707963267948966+0.08726646259971647*sin(sine*2)),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.10471975511965978*sin((sine+0.6)*-2),0,3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.9+0.15*sin((sine - 0.5)*-2),-0.2+0.12*sin((sine + 2.5)*-2))*angles(-1.0471975511965976+0.10471975511965978*sin((sine+0.4)*-2),1.4486232791552935,1.0471975511965976),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0,15,0),angles(0,0,0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(0,15,0),angles(0,0,0)),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(0,0,3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(0,0,-3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime)
+		end,
+
+		walk = function()
+
+			t.setWalkSpeed(16)
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0,15,0),angles(0,0,0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(0,15,0),angles(0,0,0)),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(0,0,3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime) 
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(0,0,-3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime)
+		end
+	})
+	addmode("c", {
+		idle = function()
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.5,0.5+0.15*sin((sine + 0.2)*2.5),0.5)*angles(1.5707963267948966+0.08726646259971647*sin((sine-0.3)*2.5),-0.6981317007977318,2.0943951023931953),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.0943951023931953+0.08726646259971647*sin((sine+0.6)*-2.5),0,3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.075+0.15*sin((sine + 0.25)*-2.5),0.2 * sin((sine-0.7)*-2.5))*angles(-0.5235987755982988+0.08726646259971647*sin((sine+0.3)*-2.5),-1.0471975511965976,-0.2792526803190927),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.5,0.5+0.15*sin((sine + 0.2)*2.5),0.5)*angles(-1.5707963267948966+0.08726646259971647*sin((sine-0.3)*2.5),2.443460952792061,1.0471975511965976),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1.075+0.15*sin((sine + 0.225)*-2.5),0.2 * sin((sine+0.65)*2.5))*angles(-0.5235987755982988+0.08726646259971647*sin((sine+0.3)*-2.5),1.2217304763960306,0.22689280275926285),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.15*sin((sine + 0.4)*2.5),0.15 * sin((sine-0.4)*2.5))*angles(-1.2217304763960306+0.08726646259971647*sin((sine+0.3)*2.5),0,3.141592653589793),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0,0,3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(4.5,-1.8,-0.2-0.9*sin(sine*1)),angles(0,-0.3490658503988659+0.6108652381980153*sin(sine*1),0.3490658503988659*sin((sine+0.5)*1))),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(0,0,-3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime)  
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(2,-1,-0.7),angles(0,-0.17453292519943295+0.2617993877991494*sin(sine*1),-0.3490658503988659+0.2617993877991494*sin((sine+0.2)*1))),deltaTime) 
+		end,
+
+		walk = function()
+
+			t.setWalkSpeed(16)
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0,0,3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime) 
+			AccessoryWeld1.C0=Lerp(AccessoryWeld1.C0,cfMul(cf(4.5,-1.8,-0.2-0.9*sin(sine*1)),angles(0,-0.3490658503988659+0.6108652381980153*sin(sine*1),0.3490658503988659*sin((sine+0.5)*1))),deltaTime) 
+			AccessoryWeld2.C0=Lerp(AccessoryWeld2.C0,cfMul(cf(0,0,-3),angles(1.5707963267948966,17453292.502490003*sin(sine*0.0000015),0)),deltaTime)  
+			AccessoryWeld3.C0=Lerp(AccessoryWeld3.C0,cfMul(cf(2,-1,-0.7),angles(0,-0.17453292519943295+0.2617993877991494*sin(sine*1),-0.3490658503988659+0.2617993877991494*sin((sine+0.2)*1))),deltaTime)
 		end
 	})
 	addmode("o", {
