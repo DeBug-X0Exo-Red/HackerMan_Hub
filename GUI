@@ -14567,7 +14567,7 @@ btn("Shade Hub >>> MODDED <<< Andrfix Studio Dummy", function()
 				TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,33+100*sin(sine*35),0),angles(0.08726646259971647*sin((sine+23)*9999),0,0.08726646259971647*sin((sine+27)*9999))),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
-			task.wait(0.3)
+			task.wait(1.5)
 			attackAnimation=function()
 				LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.1,0)*angles(-0.8726646259971648,-1.3089969389957472,-0.9162978572970231),deltaTime) 
 				RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.5,0)*angles(0.05235987755982989,1.3089969389957472,1.9198621771937625),deltaTime) 
