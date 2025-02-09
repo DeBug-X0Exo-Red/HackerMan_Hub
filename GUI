@@ -12,7 +12,7 @@ Coming soon
 	Modded Pistol v4 > 11694545311	       (optional > 4504231783)
 	Modded Studio Dummy > 4623059912	 (optional > 4504231783)
 	Modded Star Glitcher > 4458601937, 4506945409, 4315489767, 4794315940
-	Modded Moony Glitcher 4315489767, 4458601937
+	Modded Moony Glitcher 7583370812, 7548993875
 =======================================================================================================================================
 		Hiso-Hub hats
 	Mini Tonk: 12459592238
@@ -14420,9 +14420,9 @@ btn("Shade Hub >>> MODDED <<< Moony Glitcher V3", function()
 	local RightHip=getJoint("Right Hip")
 	local LeftHip=getJoint("Left Hip")
 	local Neck=getJoint("Neck")
-	local one = getPartFromMesh(4315410540,4458626951)
+	local one = getPartFromMesh(7535284433,7535284516)
 	local one = getPartJoint(one)
-	local two = getPartFromMesh(4315410540,4315250791)
+	local two = getPartFromMesh(7547179386,7547152243)
 	local two = getPartJoint(two)
 
 	addmode("default", {
