@@ -15034,7 +15034,7 @@ game.StarterGui:SetCore("SendNotification", {
 	Title = "Dev Msg";
 	Text = "this is a secret good job finding it! | this is a dev version tho so i will change things as i want and do what ever as its not made for the main hub and its just a meme";
 	Icon = "http://www.roblox.com/asset/?id=16274033459";
-	Duration = "70"
+	Duration = "140"
 
 	})
 	local t=reanimate()
@@ -15358,6 +15358,451 @@ game.StarterGui:SetCore("SendNotification", {
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
 			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
 			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("z", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*-1.5),-0.75+0.175*sin((sine + 0.75)*-1.5),-0.1+0.1*sin(sine*-1.5))*angles(-0.3490658503988659,-1.0471975511965976,-0.8726646259971648+0.1308996938995747*sin((sine-0.5)*1.5)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.25+0.2*sin((sine + 0.75)*1.5),0.2+0.2*sin((sine - 0.5)*1.5))*angles(-1.9198621771937625+0.1308996938995747*sin((sine-0.5)*1.5),-0.08726646259971647,2.6179938779914944),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.1 * sin((sine+1)*1.5),0)*angles(-1.3962634015954636,1.1344640137963142+0.17453292519943295*sin((sine-0.25)*-1.5),1.3962634015954636),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.8,0)*angles(-1.0471975511965976+0.17453292519943295*sin((sine-0.5)*-1.5),-0.5235987755982988+0.04363323129985824*sin(sine*-1.5),2.007128639793479),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.1308996938995747*sin((sine-0.5)*-1.5),0.17453292519943295+0.04363323129985824*sin(sine*-1.5),3.6651914291880923),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(0.9+0.025*sin((sine + 1)*-1.5),-1.3+0.225*sin((sine + 1)*-1.5),-0.5+0.075*sin(sine*-1.5))*angles(0.5235987755982988,2.0943951023931953,-0.7853981633974483+0.1308996938995747*sin((sine-0.5)*-1.5)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("x", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,0.1 * sin(sine*2),0.2 * sin(sine*2))*angles(-1.5707963267948966+0.08726646259971647*sin(sine*-2),0,2.9670597283903604),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.75,-0.25+0.25*sin((sine - 0.5)*2),0)*angles(0.2617993877991494*sin((sine-0.5)*-2),2.792526803190927,1.5707963267948966),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*-2),-1+0.095*sin(sine*-2),-0.1+0.25*sin(sine*-2))*angles(-0.5235987755982988+0.10471975511965978*sin(sine*2),-1.3526301702956054,-0.4188790204786391),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.5,0.25+0.25*sin((sine - 0.5)*-2),-0.25)*angles(-0.2617993877991494*sin((sine-0.5)*-2),-2.792526803190927,-1.7453292519943295),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1.05+0.05*sin(sine*-2),-1+0.115*sin(sine*-2),-0.1+0.275*sin(sine*-2))*angles(-0.4363323129985824+0.08726646259971647*sin(sine*2),1.3089969389957472,0.4363323129985824),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7016960206944713+0.05235987755982989*sin((sine-0.6)*2),0,3.3161255787892263),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("n", {
+		modeEntered=function()
+			Floating = true
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1.15,-0.5+0.25*sin((sine - 0.25)*1.5),-0.5)*angles(0,-1.0471975511965976+0.17453292519943295*sin(sine*1.5),0.17453292519943295+0.3490658503988659*sin((sine+1)*-1.5)),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7453292519943295+0.17453292519943295*sin(sine*-1.5),-0.17453292519943295,3.6651914291880923),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.2+0.15*sin((sine - 1)*1.5),0)*angles(-0.5235987755982988,1.0471975511965976+0.2617993877991494*sin((sine+0.5)*1.5),0.5235987755982988+0.5235987755982988*sin((sine-0.5)*-1.5)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0.5 * sin((sine+1)*-1.5),5+0.5*sin((sine - 0.5)*1.5),1 * sin((sine+0.5)*1.5))*angles(-1.7453292519943295+0.1308996938995747*sin((sine-0.5)*1.5),0.17453292519943295+0.08726646259971647*sin((sine+0.5)*1.5),2.443460952792061),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.5,0)*angles(-1.5707963267948966,-1.0471975511965976,1.9198621771937625+0.17453292519943295*sin(sine*1.5)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1,0)*angles(-0.5235987755982988,1.0471975511965976,0.3490658503988659+0.3490658503988659*sin((sine+2.5)*-1.5)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,3+0.25*sin(sine*3),0)*angles(-2.181661564992912+0.08726646259971647*sin((sine+0.5)*3),0.05235987755982989*sin(sine*3),3.141592653589793),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),1.3089969389957472,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.1*sin(sine*3),0)*angles(-0.4363323129985824+0.17453292519943295*sin(sine*3),-1.3089969389957472,0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("c", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.8325957145940461+0.05235987755982989*sin((sine-0.25)*2),-0.08726646259971647,3.3161255787892263),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.95+0.125*sin(sine*-2),-0.5+0.2*sin((sine + 0.75)*2))*angles(-0.08726646259971647+0.08726646259971647*sin((sine-0.5)*-2),-1.2217304763960306,0.1308996938995747),deltaTime)  
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.3+0.15*sin(sine*2),0.1 * sin((sine-0.5)*-2))*angles(-1.3962634015954636+0.08726646259971647*sin((sine-0.5)*-2),0.04363323129985824,2.9670597283903604),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.8,-0.25+0.1*sin((sine + 1)*2),0)*angles(0,-2.792526803190927,-1.6144295580947547+0.08726646259971647*sin((sine+1.75)*2)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.7,0.15+0.1*sin((sine + 1)*2),0)*angles(0,2.9670597283903604,1.7453292519943295+0.08726646259971647*sin((sine+1.75)*-2)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.15*sin(sine*-2),-0.75+0.1*sin((sine - 0.5)*-2))*angles(1.5707963267948966+0.05235987755982989*sin((sine-0.25)*-2),2.007128639793479,-2.0943951023931953),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})  
+	addmode("v", {
+		modeEntered=function()
+			Floating = true
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1.2,0.25+0.2*sin((sine - 0.5)*-2),-0.25)*angles(-1.5707963267948966,2.2689280275926285+0.17453292519943295*sin((sine+0.3)*-2),-2.443460952792061+0.08726646259971647*sin((sine+0.1)*-2)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1.2,0.25+0.2*sin((sine - 0.5)*-2),-0.25)*angles(-1.5707963267948966,-2.2689280275926285+0.17453292519943295*sin((sine+0.3)*2),2.443460952792061+0.08726646259971647*sin((sine+0.1)*2)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1,-0.1+0.075*sin(sine*2))*angles(-1.6144295580947547+0.2181661564992912*sin((sine+1.2)*2),1.3962634015954636,1.1344640137963142),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.007128639793479+0.1308996938995747*sin((sine+0.3)*-2),0.04363323129985824*sin((sine+0.5)*-1),3.141592653589793),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0.05 * sin(sine*1),5+0.5*sin((sine - 0.2)*-2),0.3 * sin((sine+0.5)*2))*angles(-1.3526301702956054+0.1308996938995747*sin((sine+0.3)*2),0.04363323129985824*sin((sine+0.5)*1),3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.5+0.25*sin((sine + 0.75)*2),-0.75)*angles(-0.5235987755982988+0.17453292519943295*sin((sine-2.75)*2),-1.3962634015954636+0.08726646259971647*sin(sine*2),0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,3+0.25*sin(sine*3),0)*angles(-2.181661564992912+0.08726646259971647*sin((sine+0.5)*3),0.05235987755982989*sin(sine*3),3.141592653589793),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),1.3089969389957472,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.1*sin(sine*3),0)*angles(-0.4363323129985824+0.17453292519943295*sin(sine*3),-1.3089969389957472,0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("b", {
+		modeEntered=function()
+			Floating = true
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.2+0.2*sin((sine + 0.75)*2),0)*angles(-0.5235987755982988,1.2217304763960306+0.17453292519943295*sin((sine+0.5)*2),0.5235987755982988),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-0.975,-0.9,0)*angles(-0.5235987755982988,-1.2217304763960306,-0.3490658503988659+0.08726646259971647*sin((sine-0.5)*2)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(0.9,-0.25+0.25*sin((sine + 0.5)*2),-0.75)*angles(-1.2217304763960306+0.17453292519943295*sin((sine+1.5)*-2),1.3962634015954636,1.2217304763960306),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,2.5+0.4*sin((sine - 0.2)*-2),0.3 * sin((sine+0.4)*2))*angles(-1.7453292519943295+0.08726646259971647*sin((sine+0.4)*2),0,2.792526803190927),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.4486232791552935+0.10471975511965978*sin((sine+0.8)*-2),0.04363323129985824+0.026179938779914945*sin((sine+0.8)*-2),3.490658503988659),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.6,0)*angles(-1.5707963267948966+0.06981317007977318*sin((sine+0.8)*-2),-1.0471975511965976,1.6144295580947547),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,3+0.25*sin(sine*3),0)*angles(-2.181661564992912+0.08726646259971647*sin((sine+0.5)*3),0.05235987755982989*sin(sine*3),3.141592653589793),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),1.3089969389957472,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.1*sin(sine*3),0)*angles(-0.4363323129985824+0.17453292519943295*sin(sine*3),-1.3089969389957472,0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("u", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.75,0.25+0.1*sin(sine*2),-0.25)*angles(0,-2.792526803190927,-1.5707963267948966+0.2617993877991494*sin((sine+4)*2)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.75,-0.5+0.15*sin(sine*2),-0.5)*angles(0,3.141592653589793,1.5707963267948966+0.17453292519943295*sin((sine+0.5)*-2)),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7453292519943295+0.08726646259971647*sin((sine+0.4)*-2),0.04363323129985824*sin(sine*-1),3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1+0.05*sin(sine*1),-1+0.2*sin(sine*-2),-0.1+0.175*sin((sine - 2.15)*2))*angles(-1.3962634015954636+0.08726646259971647*sin(sine*-2),1.4311699866353502+0.04363323129985824*sin(sine*-1),1.2217304763960306),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.2*sin(sine*2),0.2 * sin((sine-0.5)*2))*angles(-1.5707963267948966+0.08726646259971647*sin(sine*2),0.04363323129985824*sin(sine*1),3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.05*sin(sine*1),-1+0.2*sin(sine*-2),-0.1+0.175*sin((sine + 1)*2))*angles(1.7453292519943295+0.08726646259971647*sin(sine*-2),-1.6580627893946132+0.04363323129985824*sin(sine*1),1.7889624832941877),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("i", {
+		modeEntered=function()
+			Floating = true
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,-0.25+0.25*sin(sine*-1.5),-0.5)*angles(-1.0471975511965976,1.0471975511965976+0.5235987755982988*sin((sine+3)*1.5),2.0943951023931953),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(0.95,-1,-0.75)*angles(-0.8726646259971648+0.3490658503988659*sin((sine+1)*-1.5),1.2217304763960306,0.17453292519943295),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.75,0.5,0)*angles(3.141592653589793,-0.6981317007977318,0.6981317007977318),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.2689280275926285+0.17453292519943295*sin((sine+5)*-1.5),0,3.490658503988659),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,2-0.75*sin(sine*1.5),0)*angles(-2.2689280275926285+0.17453292519943295*sin((sine+5)*1.5),0,2.792526803190927+0.04363323129985824*sin((sine+1)*1.5)),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1.25,-0.5,-0.5)*angles(-0.17453292519943295-0.3490658503988659*sin((sine-1)*-1.5),-1.2217304763960306,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,3+0.25*sin(sine*3),0)*angles(-2.181661564992912+0.08726646259971647*sin((sine+0.5)*3),0.05235987755982989*sin(sine*3),3.141592653589793),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),1.3089969389957472,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.1*sin(sine*3),0)*angles(-0.4363323129985824+0.17453292519943295*sin(sine*3),-1.3089969389957472,0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.2217304763960306+0.05235987755982989*sin((sine+0.25)*3),0.08726646259971647*sin(sine*3),3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.175 * sin((sine+0.5)*3),-0.7)*angles(-0.5235987755982988,1.3089969389957472,0.2617993877991494+0.17453292519943295*sin(sine*3)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4+0.075*sin(sine*3),0)*angles(-0.9599310885968813+0.08726646259971647*sin((sine+0.75)*3),-1.3089969389957472,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("o", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.5,0.5+0.15*sin((sine + 0.2)*2.5),0.5)*angles(1.5707963267948966+0.08726646259971647*sin((sine-0.3)*2.5),-0.6981317007977318,2.0943951023931953),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.0943951023931953+0.08726646259971647*sin((sine+0.6)*-2.5),0,3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.075+0.15*sin((sine + 0.25)*-2.5),0.2 * sin((sine-0.7)*-2.5))*angles(-0.5235987755982988+0.08726646259971647*sin((sine+0.3)*-2.5),-1.0471975511965976,-0.2792526803190927),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.5,0.5+0.15*sin((sine + 0.2)*2.5),0.5)*angles(-1.5707963267948966+0.08726646259971647*sin((sine-0.3)*2.5),2.443460952792061,1.0471975511965976),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1.075+0.15*sin((sine + 0.225)*-2.5),0.2 * sin((sine+0.65)*2.5))*angles(-0.5235987755982988+0.08726646259971647*sin((sine+0.3)*-2.5),1.2217304763960306,0.22689280275926285),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.15*sin((sine + 0.4)*2.5),0.15 * sin((sine-0.4)*2.5))*angles(-1.2217304763960306+0.08726646259971647*sin((sine+0.3)*2.5),0,3.141592653589793),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("p", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.15*sin((sine - 0.6)*2),0.1 * sin((sine-0.2)*2))*angles(-1.5707963267948966+0.10471975511965978*sin((sine+0.4)*2),0,3.141592653589793),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-0.9+0.15*sin((sine - 0.5)*-2),-0.2+0.12*sin((sine + 2.5)*-2))*angles(1.0471975511965976+0.10471975511965978*sin((sine+0.4)*-2),-1.6580627893946132,1.1519173063162575),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.3+0.15*sin((sine + 1)*-2),0)*angles(-1.5707963267948966,1.3089969389957472+0.2617993877991494*sin((sine+1.5)*-2),1.5707963267948966+0.08726646259971647*sin(sine*-2)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.3+0.15*sin((sine - 0.5)*2),0)*angles(1.5707963267948966,-1.8325957145940461+0.2617993877991494*sin((sine+1.5)*-2),1.5707963267948966+0.08726646259971647*sin(sine*2)),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.5707963267948966+0.10471975511965978*sin((sine+0.6)*-2),0,3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-0.9+0.15*sin((sine - 0.5)*-2),-0.2+0.12*sin((sine + 2.5)*-2))*angles(-1.0471975511965976+0.10471975511965978*sin((sine+0.4)*-2),1.4486232791552935,1.0471975511965976),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("f", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=RightHip.C0:Lerp(cf(1+0.015*sin((sine + 0.1)*-7),-1.1+0.21*sin((sine + 0.325)*-7),0.045 * sin((sine+1)*-7))*angles(-1.0471975511965976+0.04363323129985824*sin(sine*-7),1.2217304763960306+0.017453292519943295*sin(sine*-7),1.0471975511965976),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1+0.2*sin((sine + 0.3)*7),-0.1+0.1*sin(sine*7))*angles(-1.7453292519943295+0.04363323129985824*sin(sine*7),0,2.792526803190927),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7453292519943295+0.04363323129985824*sin((sine+0.5)*-7),0.08726646259971647+0.017453292519943295*sin(sine*-7),3.490658503988659),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.5,-0.5+0.3*sin((sine + 0.25)*7),-0.25)*angles(0.3490658503988659*sin(sine*-7),2.792526803190927,1.4835298641951802+0.2617993877991494*sin((sine+0.5)*-7)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.5,0.25+0.3*sin((sine + 0.25)*7),-0.25)*angles(0.3490658503988659*sin(sine*-7),-2.6179938779914944,-1.3962634015954636+0.2617993877991494*sin((sine+0.5)*7)),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1+0.015*sin((sine + 0.1)*-7),-0.9+0.1975*sin((sine + 0.3)*-7),-0.2+0.045*sin((sine + 1)*-7))*angles(-0.4363323129985824+0.04363323129985824*sin(sine*-7),-1.2217304763960306+0.017453292519943295*sin(sine*-7),-0.7417649320975901),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("g", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,0.1 * sin((sine+0.75)*2),0.2 * sin((sine+0.25)*2))*angles(-1.4835298641951802+0.05235987755982989*sin(sine*2),0.03490658503988659*sin((sine+0.5)*2),3.6651914291880923-0.05235987755982989*sin(sine*2)),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-0.85,-1.1-0.1*sin((sine + 0.75)*2),-0.5-0.1*sin((sine + 0.25)*2))*angles(-0.8726646259971648-0.05235987755982989*sin(sine*2),-1.0471975511965976-0.05235987755982989*sin((sine+0.5)*2),-0.7853981633974483),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.35+0.1*sin((sine + 0.5)*2),0)*angles(0.6981317007977318,-1.1344640137963142+0.08726646259971647*sin(sine*2),0.6981317007977318),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.6580627893946132+0.05235987755982989*sin(sine*2),0,2.705260340591211+0.08726646259971647*sin(sine*1.75)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1.1,-1.2-0.1*sin((sine + 0.75)*2),0.2-0.1*sin((sine + 0.25)*2))*angles(-0.7853981633974483-0.05235987755982989*sin(sine*2),1.3089969389957472-0.03490658503988659*sin((sine+0.5)*2),0.3490658503988659),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1.05,-0.3+0.3*sin(sine*2),0)*angles(1.7453292519943295-0.05235987755982989*sin((sine+0.5)*2),1.9198621771937625+0.17453292519943295*sin(sine*2),-0.3490658503988659*sin((sine+0.75)*2)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("h", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.6580627893946132-0.03490658503988659*sin((sine+0.75)*2.5),0,3.5779249665883754),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.9,0.25+0.1*sin((sine + 0.5)*2.5),0.2+0.1*sin(sine*2.5))*angles(-0.8726646259971648,-1.2217304763960306-0.05235987755982989*sin(sine*2.5),-0.7853981633974483-0.2181661564992912*sin((sine+0.75)*2.5)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,0.1 * sin((sine+0.75)*2.5),0.2 * sin(sine*2.5))*angles(-1.4835298641951802+0.05235987755982989*sin(sine*2.5),0,2.705260340591211),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1.1-0.025*sin(sine*2.5),-1.1-0.09*sin((sine + 0.75)*2.5),-0.2-0.15*sin(sine*2.5))*angles(-0.6981317007977318-0.05235987755982989*sin(sine*2.5),-1.0471975511965976,-0.6108652381980153),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1-0.025*sin(sine*2.5),-1.1-0.1*sin((sine + 0.75)*2.5),0.1-0.15*sin(sine*2.5))*angles(-0.6981317007977318-0.05235987755982989*sin(sine*2.5),1.0471975511965976,0.6108652381980153),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.5,0)*angles(1.4835298641951802-0.03490658503988659*sin((sine+0.75)*2.5),2.0943951023931953,1.5707963267948966),deltaTime)
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("j", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.4398966328953218+0.06981317007977318*sin((sine-0.3)*-4),0,3.141592653589793),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.2*sin((sine + 0.3)*-4),-0.2+0.125*sin(sine*-4))*angles(-1.0471975511965976+0.08726646259971647*sin(sine*-4),1.2217304763960306,0.8726646259971648),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.1+0.2*sin((sine + 0.3)*-4),-0.4+0.1*sin(sine*-4))*angles(1.0471975511965976+0.08726646259971647*sin(sine*-4),-1.6580627893946132,1.1344640137963142),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.4,-0.25+0.2*sin((sine - 1.5)*4),-0.8)*angles(-1.9198621771937625+0.17453292519943295*sin((sine-0.5)*4),-0.8726646259971648,1.5707963267948966),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.75,-0.3+0.2*sin((sine - 3)*4),-0.25)*angles(0,2.9670597283903604,1.5707963267948966+0.17453292519943295*sin((sine-2)*4)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,0.2 * sin((sine+0.3)*4),0.2 * sin(sine*4))*angles(-1.5707963267948966+0.08726646259971647*sin(sine*4),0,3.141592653589793),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("k", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1,-0.25+0.1*sin((sine + 0.8)*1.5))*angles(-1.8500490071139892+0.1308996938995747*sin((sine+1.3)*1.5),1.2217304763960306+0.04363323129985824*sin((sine+0.25)*1.5),1.7453292519943295),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-2.2689280275926285+0.1308996938995747*sin((sine+0.4)*-1.5),-0.17453292519943295+0.04363323129985824*sin((sine-0.25)*1.5),3.3161255787892263+0.04363323129985824*sin((sine+0.5)*-1.5)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1.1,0.8+0.1*sin((sine + 1.75)*-1.5),-0.25+0.1*sin((sine - 0.75)*1.5))*angles(4.014257279586958+0.08726646259971647*sin((sine+0.5)*-1.5),2.007128639793479,-0.5235987755982988+0.08726646259971647*sin((sine-0.75)*1.5)),deltaTime) 
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.75,0.25,-0.25)*angles(0.17453292519943295,-2.443460952792061,-2.443460952792061+0.17453292519943295*sin((sine+0.4)*1.5)),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-0.9+0.1*sin((sine + 0.75)*1.5),-0.2+0.1*sin((sine - 0.25)*-1.5),-0.5)*angles(-0.5235987755982988,-1.2217304763960306+0.08726646259971647*sin((sine+0.5)*1.5),-1.0471975511965976),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0.1 * sin((sine+0.75)*1.5),-0.75+0.1*sin((sine - 0.25)*1.5),0.1 * sin((sine-0.5)*1.5))*angles(-2.2689280275926285+0.08726646259971647*sin((sine-0.5)*1.5),0.04363323129985824*sin((sine-1)*-1.5),2.792526803190927),deltaTime)
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime)  
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("l", {
+		modeEntered=function()
+			Floating = false
+		end,
+		idle = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-0.5,0.2 * sin((sine-0.25)*1.5),0)*angles(-0.17453292519943295+0.17453292519943295*sin((sine+0.25)*1.5),-2.6179938779914944+0.08726646259971647*sin((sine-0.5)*1.5),-2.0943951023931953+0.17453292519943295*sin((sine+0.75)*1.5)),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0.1 * sin((sine-0.5)*1.5),-0.25+0.1*sin((sine + 1.25)*1.5),0.2 * sin(sine*1.5))*angles(-1.3962634015954636+0.10471975511965978*sin((sine+0.5)*1.5),0.17453292519943295+0.04363323129985824*sin((sine-0.75)*1.5),2.9670597283903604+0.1308996938995747*sin((sine+1)*1.5)),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1.2+0.2*sin((sine + 0.8)*-1.5),-0.5)*angles(0.3490658503988659+0.08726646259971647*sin((sine-0.75)*1.5),-1.4835298641951802+0.08726646259971647*sin((sine-1)*-1.5),0.5235987755982988),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.8325957145940461+0.1308996938995747*sin((sine-0.75)*1.5),-0.17453292519943295+0.08726646259971647*sin((sine+0.75)*1.5),3.3161255787892263+0.08726646259971647*sin((sine-0.5)*1.5)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.15*sin((sine - 0.75)*1.5),-0.9)*angles(-1.7453292519943295,1.0471975511965976+0.08726646259971647*sin((sine+0.5)*1.5),1.0471975511965976+0.1308996938995747*sin((sine-0.75)*1.5)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(0.5+0.1*sin((sine - 0.75)*1.5),-0.5+0.1*sin((sine - 0.25)*1.5),0.1)*angles(0.17453292519943295*sin(sine*1.5),2.792526803190927+0.08726646259971647*sin((sine-0.5)*1.5),1.5707963267948966+0.08726646259971647*sin((sine+0.5)*1.5)),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
+			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		walk = function()
+			if attackAnimation then return attackAnimation() end
+			LeftShoulder.C0=LeftShoulder.C0:Lerp(cf(-1,0.4,0.5 * sin((sine+0.05)*7))*angles(-1.0471975511965976*sin(sine*7),-1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			RootJoint.C0=RootJoint.C0:Lerp(cf(0,-0.1 * sin((sine+0.75)*14),0)*angles(-1.7453292519943295+0.05235987755982989*sin(sine*14),0,3.141592653589793+0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4,-0.5 * sin((sine+0.05)*7))*angles(1.0471975511965976*sin(sine*7),1.5707963267948966-0.17453292519943295*sin(sine*7),0),deltaTime) 
+			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.3962634015954636-0.05235987755982989*sin(sine*14),0,3.141592653589793-0.05235987755982989*sin(sine*7)),deltaTime) 
+			RightHip.C0=RightHip.C0:Lerp(cf(1,-1+0.3*sin((sine + 0.74)*7),0.4 * sin(sine*7))*angles(-0.9599310885968813*sin(sine*7),1.5707963267948966,0),deltaTime) 
+			LeftHip.C0=LeftHip.C0:Lerp(cf(-1,-1-0.3*sin((sine + 0.75)*7),-0.4 * sin(sine*7))*angles(0.9599310885968813*sin(sine*7),-1.5707963267948966,0),deltaTime) 
+			AccessoryWeld.C0=Lerp(AccessoryWeld.C0,cfMul(cf(0.6,0.6,-0.1),angles(0,0,-0.6108652381980153)),deltaTime) 
 			TestWeld.C0=Lerp(TestWeld.C0,cfMul(cf(0,1,0),angles(0,17453.275066650775*sin(sine*0.008),0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
