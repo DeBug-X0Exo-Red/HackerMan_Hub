@@ -15386,7 +15386,7 @@ game.StarterGui:SetCore("SendNotification", {
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		walk = function()
-			t.setWalkSpeed(20)
+			t.setWalkSpeed(12)
 			if attackAnimation then return attackAnimation() end
 			RightShoulder.C0=RightShoulder.C0:Lerp(cf(1,0.4+0.1*sin((sine + 0.1)*5),0.2 * sin((sine-0.1)*-5))*angles(0.17453292519943295*sin((sine-0.8)*-5),1.5707963267948966+0.3490658503988659*sin(sine*5),0.5235987755982988*sin((sine-0.2)*5)),deltaTime) 
 			Neck.C0=Neck.C0:Lerp(cf(0,1,0)*angles(-1.7016960206944713+0.04363323129985824*sin((sine-0.5)*7.5),0,3.141592653589793+0.04363323129985824*sin(sine*-5)),deltaTime) 
