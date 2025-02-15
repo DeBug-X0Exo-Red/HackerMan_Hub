@@ -16889,6 +16889,140 @@ game.StarterGui:SetCore("SendNotification", {
 
 		end
 })
+	addmode("h", {
+		modeEntered=function()
+			Hammer = false
+		end,
+		idle = function()
+			t.setWalkSpeed(16)
+				t.setJumpPower(50)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966,0,3.141592653589793),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1.5,0.5,0),angles(-1.5707963267948966,0,-1.5707963267948966)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1.5,0.5,0),angles(-1.5707963267948966,0,1.5707963267948966)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+
+		end,
+		walk = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966,0,3.141592653589793),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1.5,0.5,0),angles(-1.5707963267948966,0,-1.5707963267948966)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1.5,0.5,0),angles(-1.5707963267948966,0,1.5707963267948966)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		jump = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966,0,3.141592653589793),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1.5,0.5,0),angles(-1.5707963267948966,0,-1.5707963267948966)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1.5,0.5,0),angles(-1.5707963267948966,0,1.5707963267948966)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		fall = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966,0,3.141592653589793),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1.5,0.5,0),angles(-1.5707963267948966,0,-1.5707963267948966)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1.5,0.5,0),angles(-1.5707963267948966,0,1.5707963267948966)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
+	addmode("j", {
+		modeEntered=function()
+			Hammer = false
+		end,
+		idle = function()
+			t.setWalkSpeed(16)
+				t.setJumpPower(50)
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0.17453292519943295*sin((sine+5320)*999999),1.5707963267948966+0.17453292519943295*sin((sine+351215420)*999999),0.17453292519943295*sin((sine+463647)*999999))),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0.17453292519943295*sin((sine+4785)*999999),1.5707963267948966+0.17453292519943295*sin((sine+2347)*999999),0.17453292519943295*sin((sine+7564)*999999))),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0.17453292519943295*sin((sine+9654)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+135)*999999),0.17453292519943295*sin((sine+124)*999999))),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966+0.17453292519943295*sin(sine*999999),0.17453292519943295*sin((sine+3)*999999),3.141592653589793+0.17453292519943295*sin((sine+47)*999999))),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966+0.03490658503988659*sin((sine+8654)*999999),0.03490658503988659*sin((sine+6)*999999),3.141592653589793+0.03490658503988659*sin((sine+37)*999999)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.17453292519943295*sin((sine+9764)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+9)*999999),0.17453292519943295*sin((sine+457786)*999999))),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(5+15*sin((sine+52634)*999999),15 * sin((sine+63426324)*999999),15 * sin((sine+64646420)*999999)),angles(17.43583922742335*sin((sine+752567)*999999),17.43583922742335*sin((sine+6234)*999999),17.43583922742335*sin((sine+4321)*999999))),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+
+		end,
+		walk = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0.17453292519943295*sin((sine+5320)*999999),1.5707963267948966+0.17453292519943295*sin((sine+351215420)*999999),0.17453292519943295*sin((sine+463647)*999999))),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0.17453292519943295*sin((sine+4785)*999999),1.5707963267948966+0.17453292519943295*sin((sine+2347)*999999),0.17453292519943295*sin((sine+7564)*999999))),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0.17453292519943295*sin((sine+9654)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+135)*999999),0.17453292519943295*sin((sine+124)*999999))),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966+0.17453292519943295*sin(sine*999999),0.17453292519943295*sin((sine+3)*999999),3.141592653589793+0.17453292519943295*sin((sine+47)*999999))),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966+0.03490658503988659*sin((sine+8654)*999999),0.03490658503988659*sin((sine+6)*999999),3.141592653589793+0.03490658503988659*sin((sine+37)*999999)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.17453292519943295*sin((sine+9764)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+9)*999999),0.17453292519943295*sin((sine+457786)*999999))),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(5+15*sin((sine+52634)*999999),15 * sin((sine+63426324)*999999),15 * sin((sine+64646420)*999999)),angles(17.43583922742335*sin((sine+752567)*999999),17.43583922742335*sin((sine+6234)*999999),17.43583922742335*sin((sine+4321)*999999))),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		jump = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0.17453292519943295*sin((sine+5320)*999999),1.5707963267948966+0.17453292519943295*sin((sine+351215420)*999999),0.17453292519943295*sin((sine+463647)*999999))),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0.17453292519943295*sin((sine+4785)*999999),1.5707963267948966+0.17453292519943295*sin((sine+2347)*999999),0.17453292519943295*sin((sine+7564)*999999))),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0.17453292519943295*sin((sine+9654)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+135)*999999),0.17453292519943295*sin((sine+124)*999999))),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966+0.17453292519943295*sin(sine*999999),0.17453292519943295*sin((sine+3)*999999),3.141592653589793+0.17453292519943295*sin((sine+47)*999999))),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966+0.03490658503988659*sin((sine+8654)*999999),0.03490658503988659*sin((sine+6)*999999),3.141592653589793+0.03490658503988659*sin((sine+37)*999999)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.17453292519943295*sin((sine+9764)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+9)*999999),0.17453292519943295*sin((sine+457786)*999999))),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(5+15*sin((sine+52634)*999999),15 * sin((sine+63426324)*999999),15 * sin((sine+64646420)*999999)),angles(17.43583922742335*sin((sine+752567)*999999),17.43583922742335*sin((sine+6234)*999999),17.43583922742335*sin((sine+4321)*999999))),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		fall = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0.17453292519943295*sin((sine+5320)*999999),1.5707963267948966+0.17453292519943295*sin((sine+351215420)*999999),0.17453292519943295*sin((sine+463647)*999999))),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0.17453292519943295*sin((sine+4785)*999999),1.5707963267948966+0.17453292519943295*sin((sine+2347)*999999),0.17453292519943295*sin((sine+7564)*999999))),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0.17453292519943295*sin((sine+9654)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+135)*999999),0.17453292519943295*sin((sine+124)*999999))),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966+0.17453292519943295*sin(sine*999999),0.17453292519943295*sin((sine+3)*999999),3.141592653589793+0.17453292519943295*sin((sine+47)*999999))),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966+0.03490658503988659*sin((sine+8654)*999999),0.03490658503988659*sin((sine+6)*999999),3.141592653589793+0.03490658503988659*sin((sine+37)*999999)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.17453292519943295*sin((sine+9764)*999999),-1.5707963267948966+0.17453292519943295*sin((sine+9)*999999),0.17453292519943295*sin((sine+457786)*999999))),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(5+15*sin((sine+52634)*999999),15 * sin((sine+63426324)*999999),15 * sin((sine+64646420)*999999)),angles(17.43583922742335*sin((sine+752567)*999999),17.43583922742335*sin((sine+6234)*999999),17.43583922742335*sin((sine+4321)*999999))),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
 	addmode("q", {
 		modeEntered=function()
 			Hammer = false
