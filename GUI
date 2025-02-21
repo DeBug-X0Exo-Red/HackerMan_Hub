@@ -323,6 +323,8 @@ local accessorylimbs={
 	{meshid="18640901641",textureid="18640901676",C0=angles(rad(0),rad(0),rad(-180)),Name="Left Leg"},
 	{meshid="18640901641",textureid="18640901676",C0=angles(rad(0),rad(0),rad(180)),Name="Right Leg"},
 
+	{meshid="18400530688",textureid="18400548452",C0=cf(0,-0.55,0),Name="Right Leg"},
+
 	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
 	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
 
