@@ -5,8 +5,8 @@ runs on patchma what else?
 HackerMan Hub's YouTube
 https://www.youtube.com/@HackerManHub
 https://www.youtube.com/watch?v=nxFfGj7-T_M
-HackerMan Hub's Discord
-Coming real soon
+HackerMan Hub's Discord (WAS JUST MADE)
+https://discord.gg/nTsT3WD7Zm
 =======================================================================================================================================
 		Modded Animations Hats
 	Modded Pistol v4 > 11694545311	       (optional > 4504231783)
@@ -151,10 +151,18 @@ some other things
 ]]
 
 game.StarterGui:SetCore("SendNotification", {
+	Title = "HackerMan Hub / DISCORD SERVER IS HERE!!!";
+	Text = "IN THE CONSOLE TOO HIT F9 > https://discord.gg/nTsT3WD7Zm < JOIN NOW";
+	Icon = "http://www.roblox.com/asset/?id=116575803526703";
+	Duration = "10"
+
+	})
+
+game.StarterGui:SetCore("SendNotification", {
 	Title = "HackerMan Hub Loaded";
 	Text = "Made By DeBug-X Team with many other hubs and animations > check console for more info";
 	Icon = "http://www.roblox.com/asset/?id=116575803526703";
-	Duration = "35"
+	Duration = "40"
 
 	})
 
@@ -334,6 +342,7 @@ local accessorylimbs={
 
 	{meshid="18400530688",textureid="18400548452",C0=cf(0,-0.55,0),Name="Right Leg"},
 	{meshid="18615136546",textureid="18615141631",C0=cf(0,-0.55,0),Name="Right Leg"},
+	{meshid="109623659028540",textureid="117918080152423",C0=cf(0,-0.55,0),Name="Right Leg"},
 
 	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
 	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
