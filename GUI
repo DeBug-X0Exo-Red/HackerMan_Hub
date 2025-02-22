@@ -1,3 +1,6 @@
+print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
+print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
 warn[[ by debug-x team we have updated many animations and animation hubs to the newest version of patchma aka version v43
 btw new legs and arms from genesis will be added with time noob rig works
 runs on patchma what else?
@@ -34,6 +37,7 @@ https://discord.gg/nTsT3WD7Zm
 =======================================================================================================================================
 		real_Carl001's VOHMH
 	the classicest old/new: 15222706412,18587610978,18615300474
+	HackerMan Mod: 12402087358
 =======================================================================================================================================
 	IDs of paid body accessories:
 	-for arms and are in sets of 2 > 11159410305,11263254795 / 14255556501,14255554762 / 12344545199,12344591101 / 13839976999,13831200263
@@ -84,6 +88,14 @@ CREDITS :D
 > Rqz            | Unknown | A Owner and maker of Genesis Fe
 > Chip           | Animator & Coder | No longer works with and or for Genesis Fe
 =======================================================================================================================================
+			Update Title/Msg
+			  {UPDATE V11}
+			 THE RIG UPDATE
+Many more rigs were added due to old ones going down and new ones popping up
+and im sorry some people were having problems before but now we have the new
+noob rig, black rig, white arm/legs rig, and more
+and if you have a rig you want added just make a suggestion/request in the discord server we have
+=======================================================================================================================================
                         update logs
   	  update v1
 > added Genesis fe noob rig legs and arms
@@ -132,6 +144,10 @@ CREDITS :D
 > added real_Carl001's version of HackerMan Hub/VOHMH
 > added korblox the ids for em are > 95569828063403/18400558926/18615300474
 > added me being sleepy
+	update v11
+> added new Noob rig
+> added new black arms/legs/torso rig
+> added new white arms/legs rig
 =======================================================================================================================================
 	Dev Msgs [logs from a dc server to the github]
 >>> very sleepy
@@ -328,6 +344,21 @@ local accessorylimbs={
 	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
 	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
 
+	{meshid="137702817952968",textureid="135650240593878",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
+	{meshid="137702817952968",textureid="135650240593878",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
+
+	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
+	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
+
+	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
+	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
+
+	{meshid="139733645770094",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
+	{meshid="99608462237958",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
+
+	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
+	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
+
 	{meshid="12344207333",textureid="",C0=angles(2,0,0),Name="Left Arm"},
 	{meshid="12344206657",textureid="",C0=angles(2,0,0),Name="Right Arm"},
 
@@ -347,6 +378,15 @@ local accessorylimbs={
 	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
 	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
 
+	{meshid="137702817952968",textureid="73798034827573",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
+	{meshid="137702817952968",textureid="73798034827573",C0=angles(rad(0),rad(0),rad(90)),Name="Left Leg"},
+
+	{meshid="117287001096396",textureid="120169691545791",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
+	{meshid="117287001096396",textureid="120169691545791",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
+
+	{meshid="117287001096396",textureid="120169691545791",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
+	{meshid="117287001096396",textureid="120169691545791",C0=angles(0,0,1.5707963267948966),Name="Left Leg"},
+
 	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Left Arm"},
 	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
 
@@ -356,6 +396,9 @@ local accessorylimbs={
 	{meshid="14768666349",textureid="",C0=cf_0,Name="Torso"},
 	{meshid="14241018198",textureid="",C0=cf_0,Name="Torso"},
 	{meshid="13421774668",textureid="",C0=cf_0,Name="Torso"},
+	{meshid="110684113028749",textureid="70661572547971",C0=cf_0,Name="Torso"},
+	{meshid="127552124837034",textureid="131014325980101",C0=cf_0,Name="Torso"},
+	{meshid="126825022897778",textureid="125975972015302",C0=cf_0,Name="Torso"},
 	{meshid="110684113028749",textureid="70661572547971",C0=cf_0,Name="Torso"},
 
 	{meshid="4324138105",textureid="4324138210",C0=cfMul(angles(-1.6144295580947547,1.5707963267948966,0),cf(-0.125,0.3,0)),Name="Left Arm"},
@@ -21756,3 +21799,6 @@ if not iscg then
 	twait(3)
 	insSet(i7,"Text",guiTheme.guiTitle)
 end
+print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
+print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
