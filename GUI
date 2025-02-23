@@ -19978,6 +19978,8 @@ game.StarterGui:SetCore("SendNotification", {
 	local HammerWeld = getPartJoint(HammerWeld)
 	local CoilWeld = getPartFromMesh(18385651164,18385651291)
 	local CoilWeld = getPartJoint(CoilWeld)
+	local CapeWeld = getPartFromMesh(14930333587,14930519218)
+	local CapeWeld = getPartJoint(CapeWeld)
 	local cframes=t.cframes
 	local rootpart1=t.getPart("HumanoidRootPart")
 	local rootpart=t.getPart("Head")
@@ -20073,6 +20075,7 @@ game.StarterGui:SetCore("SendNotification", {
 				HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(3.5,-2.5,-1.5),angles(1.5707963267948966,0.8726646259971648,1.5707963267948966)),deltaTime) 
 				CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
 				SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+				CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.5)
@@ -20088,6 +20091,7 @@ game.StarterGui:SetCore("SendNotification", {
 				HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(3.5,-2.5,-1.5),angles(1.5707963267948966,0.8726646259971648,1.5707963267948966)),deltaTime)
 				CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
 				SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+				CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.2)
@@ -20106,6 +20110,7 @@ game.StarterGui:SetCore("SendNotification", {
 				HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 				CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
 				SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-1.5,-3.5,1.5),angles(-1.5707963267948966,3.141592653589793,1.5707963267948966)),deltaTime) 
+				CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.5)
@@ -20121,6 +20126,7 @@ game.StarterGui:SetCore("SendNotification", {
 				HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 				CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
 				SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-1.5,-3.5,1.5),angles(-1.5707963267948966,3.141592653589793,1.5707963267948966)),deltaTime)
+				CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 				i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 			end
 			task.wait(0.2)
@@ -20147,6 +20153,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20163,6 +20170,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20178,6 +20186,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20193,6 +20202,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20214,6 +20224,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20229,7 +20240,8 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
-			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime)
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20245,6 +20257,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20259,7 +20272,8 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
-			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime)
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20281,6 +20295,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20298,6 +20313,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20314,6 +20330,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20330,6 +20347,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20351,6 +20369,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20367,6 +20386,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20382,6 +20402,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20397,6 +20418,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20418,6 +20440,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20434,6 +20457,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20449,6 +20473,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20464,6 +20489,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20485,6 +20511,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20501,6 +20528,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20516,6 +20544,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20531,6 +20560,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20552,6 +20582,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20568,6 +20599,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20583,6 +20615,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20598,6 +20631,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20619,6 +20653,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime)
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end
@@ -20641,6 +20676,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20657,6 +20693,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20672,6 +20709,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20686,7 +20724,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
-			CoilWeld.C0=Lerp(CoilWeld.C0,cf(15,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20708,6 +20746,7 @@ game.StarterGui:SetCore("SendNotification", {
 			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20724,6 +20763,7 @@ game.StarterGui:SetCore("SendNotification", {
 			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20739,6 +20779,7 @@ game.StarterGui:SetCore("SendNotification", {
 			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20754,6 +20795,7 @@ game.StarterGui:SetCore("SendNotification", {
 			CoilWeld.C0=Lerp(CoilWeld.C0,cfMul(cf(15 * sin((sine+6034)*999999),15+5*sin((sine+64246)*999999),5+15*sin((sine+4632)*999999)),angles(17.43583922742335*sin((sine+2436)*999999),17.43583922742335*sin((sine+60462)*999999),17.43583922742335*sin((sine+106324)*999999))),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1.5+15*sin((sine+1325)*999999),15 * sin((sine+3251)*999999),5+15*sin((sine+5321)*999999)),angles(17.43583922742335*sin((sine+22450)*999999),17.43583922742335*sin((sine+53215)*999999),17.43583922742335*sin((sine+521)*999999))),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(5+15*sin((sine+12)*999999),15 * sin((sine+623467)*999999),15 * sin((sine+345276)*999999)),angles(17.43583922742335*sin((sine+235)*999999),17.43583922742335*sin((sine+643340)*999999),17.43583922742335*sin((sine+65265)*999999))),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20775,6 +20817,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20791,6 +20834,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20806,6 +20850,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20821,6 +20866,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(150,350,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20842,6 +20888,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20858,6 +20905,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20873,6 +20921,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20888,6 +20937,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20909,6 +20959,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20925,6 +20976,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -20940,6 +20992,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -20955,6 +21008,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -20975,7 +21029,8 @@ game.StarterGui:SetCore("SendNotification", {
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
-			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime)
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime)  
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -20992,6 +21047,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21007,6 +21063,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21022,6 +21079,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21043,6 +21101,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21059,6 +21118,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21074,6 +21134,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21089,6 +21150,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,255,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21110,6 +21172,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21126,6 +21189,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21141,6 +21205,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21156,6 +21221,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21177,6 +21243,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,-15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		walk = function()
@@ -21192,6 +21259,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,-15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21207,6 +21275,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime)   
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,-15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21222,6 +21291,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,-15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21243,6 +21313,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21259,6 +21330,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21274,6 +21346,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21289,6 +21362,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21310,6 +21384,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21326,6 +21401,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21341,6 +21417,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21356,6 +21433,7 @@ game.StarterGui:SetCore("SendNotification", {
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21377,6 +21455,7 @@ game.StarterGui:SetCore("SendNotification", {
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21393,6 +21472,7 @@ game.StarterGui:SetCore("SendNotification", {
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21408,6 +21488,7 @@ game.StarterGui:SetCore("SendNotification", {
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-25),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21423,6 +21504,7 @@ game.StarterGui:SetCore("SendNotification", {
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime)  
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-25),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21444,6 +21526,7 @@ game.StarterGui:SetCore("SendNotification", {
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime)  
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21460,6 +21543,7 @@ game.StarterGui:SetCore("SendNotification", {
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime)  
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21475,6 +21559,7 @@ game.StarterGui:SetCore("SendNotification", {
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21490,6 +21575,7 @@ game.StarterGui:SetCore("SendNotification", {
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,15,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
@@ -21511,6 +21597,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,1,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 
 		end,
@@ -21527,6 +21614,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,1,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		jump = function()
@@ -21542,6 +21630,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,1,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end,
 		fall = function()
@@ -21557,6 +21646,7 @@ game.StarterGui:SetCore("SendNotification", {
 			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,1,0),deltaTime) 
 			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
 			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,1,0),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
