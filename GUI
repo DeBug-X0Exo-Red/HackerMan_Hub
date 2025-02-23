@@ -16219,7 +16219,7 @@ end)
 lbl("^^^ by DeBug-X Team ^^^").TextColor3=c3(50,0,0)
 lbl("version = 4.0").TextColor3=c3(50,50,50)
 lbl("---------------------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
-lbl("patchma hub animations").TextColor3=c3(1,1,1)
+lbl("patchma hub animations").TextColor3=c3(0,0,1)
 btn("creepy crawler",function()
 	local t=reanimate()
 	if type(t)~="table" then return end
