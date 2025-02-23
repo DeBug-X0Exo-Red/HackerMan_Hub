@@ -19108,7 +19108,9 @@ btn("Shade Hub >>> MODDED <<< Pistol V4", function()
 end)
 lbl("^^^ By DeBug-X Team ^^^").TextColor3=c3(0.35,0,0)
 lbl("verison = 1").TextColor3=c3(1,1,1)
-btn("------------------------------------------------------------------------------------------------------------", function()
+lbl("------------------------------------------------------------------------------------------------------------").TextColor3=c3(0,0,0)
+lbl("HackerMan Hub Animations").TextColor3=c3(0,0.5,0)
+btn("HackerMan Hub Mod", function()
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Dev Msg";
 	Text = "this is a secret good job finding it! | this is a dev version tho so i will change things as i want and do what ever as its not made for the main hub and its just a meme";
@@ -19957,7 +19959,7 @@ game.StarterGui:SetCore("SendNotification", {
 		end
 	})
 end)
-btn("the classic > Beta", function()
+btn("HackerMan Hub classic", function()
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Dev Msg";
 	Text = "this is a secret good job finding it! | this is a dev version tho so i will change things as i want and do what ever as its not made for the main hub and its just a meme";
@@ -21020,6 +21022,77 @@ game.StarterGui:SetCore("SendNotification", {
 			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
 		end
 	})
+	addmode("p", {
+		modeEntered=function()
+			Hammer = true
+		end,
+		idle = function()
+			t.setWalkSpeed(16)
+				t.setJumpPower(50)
+			if attackAnimation then return attackAnimation() end
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.1308996938995747*sin(sine*0.7),-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(-0.1308996938995747*sin(sine*0.7),-1.5707963267948966,0)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(-0.1308996938995747*sin(sine*0.7),1.5707963267948966,0)),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,-0.9,0),angles(-1.5707963267948966,3.141592653589793,3.141592653589793)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime)
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime)  
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+
+		end,
+		walk = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0.8726646259971648*sin(sine*-7),-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0.8726646259971648*sin(sine*7),-1.5707963267948966,0)),deltaTime)  
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0.8726646259971648*sin(sine*7),1.5707963267948966,0)),deltaTime) 
+			RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,-0.9,0),angles(-1.5707963267948966,3.141592653589793,3.141592653589793)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		jump = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,-0.9,0),angles(-1.5707963267948966,3.141592653589793,3.141592653589793)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(3.141592653589793,-1.5707963267948966,0)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime)  
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cf(0,0.4,-0.3),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end,
+		fall = function()
+			t.setWalkSpeed(16)
+			if attackAnimation then return attackAnimation() end
+			RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0,-0.9,0),angles(-1.5707963267948966,3.141592653589793,3.141592653589793)),deltaTime) 
+			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime) 
+			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime) 
+			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(3.141592653589793,-1.5707963267948966,0)),deltaTime) 
+			Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) 
+			HammerWeld.C0=Lerp(HammerWeld.C0,cfMul(cf(1,0,-0.15),angles(-0.08726646259971647,-0.08726646259971647,-0.4363323129985824)),deltaTime) 
+			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0,1.5707963267948966,1.5707963267948966)),deltaTime) 
+			SwordWeld.C0=Lerp(SwordWeld.C0,cfMul(cf(-0.6,1.1,-0.55),angles(0,0,-2.530727415391778)),deltaTime) 
+			BtoolsWeld.C0=Lerp(BtoolsWeld.C0,cf(0,2,0.5),deltaTime) 
+			CoilWeld.C0=Lerp(CoilWeld.C0,cf(0,0,-15),deltaTime) 
+			CapeWeld.C0=Lerp(CapeWeld.C0,cfMul(cf(0,0.5+0.05*sin((sine+6.5)*13),-0.7-0.11*sin((sine+6.5)*13)),angles(0.5235987755982988+0.1308996938995747*sin((sine+6.5)*13),0,0)),deltaTime) 
+			i2.StudsOffsetWorldSpace=cframes[rootpart].Position 
+		end
+	})
 	addmode("t", {
 		modeEntered=function()
 			Hammer = true
@@ -21659,6 +21732,8 @@ game.StarterGui:SetCore("SendNotification", {
 		end
 	})
 end)
+lbl("^^^ By HackerMan Hub Team ^^^").TextColor3=c3(0,0.5,0)
+lbl("verison = 1").TextColor3=c3(1,1,1)
 lbl("Misc").TextColor3=c3(1,1,1)
 btn("empty reanimate (no animations)", reanimate).TextColor3=c3(0.6,0,0)
 
