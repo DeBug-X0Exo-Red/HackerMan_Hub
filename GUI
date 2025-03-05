@@ -57,14 +57,21 @@ https://discord.gg/nTsT3WD7Zm
 	sword: 17326812233,17326800544
 =======================================================================================================================================
     HackerMan Hub Info
-DevInfo Version > Err43
-patchma Version > v43
-Hub Version > v10
-Animations > 75+
+DevInfo Version > HaxeR
+patchma Version > v45
+Hub Version > v12
+Animations > 80+
 Makers of Hub > DeBug-X Team
+
+executors that have PermaDeath (updated 3/4/25)
+---------------------------------------------------------------------------------------------------------------------------------------
+synapse z (is down)
+delta (only ios rn)
+frostware android gg/getfrost
+nebula android gg/9Hm7p7hE 
 =======================================================================================================================================
 CREDITS :D
-    DeBug-x Team / HackerMan Team / 17 animations used
+    DeBug-x Team / HackerMan Team / 18 animations used
 > toya           debug-x team | emotional support pet | is a cat
 > DeBug-Cookie   debug-x team | Tester | she does nothing other then that lmao
 > Exotic         debug-x team | Animator & Tester | not the name of main nor main alt but i just go by that and it has more hats on this account > 
@@ -89,12 +96,17 @@ CREDITS :D
 > Chip           | Animator & Coder | No longer works with and or for Genesis Fe
 =======================================================================================================================================
 			Update Title/Msg
-			  {UPDATE V11}
-			 THE RIG UPDATE
-Many more rigs were added due to old ones going down and new ones popping up
-and im sorry some people were having problems before but now we have the new
-noob rig, black rig, white arm/legs rig, and more
-and if you have a rig you want added just make a suggestion/request in the discord server we have
+			  {UPDATE V12}
+		THE PATCHMA UPDATE / TEST UPDATE
+patchma hub got a update from v43 to v44 and hackerman hub just updated to it have fun perma death is only working for a few executors
+there is a list of executors above in hackerman hub info
+
+something new "ban hammer test" is now no longer hidden + "the classics" is no longer hidden too + "hackerman" mod is no longer hidden
+we changed up a few small things to be more like genesis fe rigs so people dont need to worry about 
+the r15 hat arms in the same place as the legs for that rig
+and more i forgot or something :D
+
+we added some cool text to the code just so if you go looking around you know who's script you looking thro (is joke we dont care lol)
 =======================================================================================================================================
                         update logs
   	  update v1
@@ -148,24 +160,36 @@ and if you have a rig you want added just make a suggestion/request in the disco
 > added new Noob rig
 > added new black arms/legs/torso rig
 > added new white arms/legs rig
+	update v12
+! updated to patchma v44
+! updated our hidden scripts
+^ changed so their no longer hidden
+? fix small rig problems
+> added more stuff to promote our discord server bc why not?
 =======================================================================================================================================
 	Dev Msgs [logs from a dc server to the github]
 >>> very sleepy
 >>> if you want your animations in HackerMan Hub just put a msg on our discord
 ---------------------------------------------------------------------------------------------------------------------------------------
 	Dev Notes
-fr forget everything i said i would do im lazy as hell and burnout hurt lmao
+very dumb fr fr anywho have fun in patchma v44
 =======================================================================================================================================
 			comming soon
-more modded star glitcher from shade hub modes
-better ui
-hat drop mode
-200 under map mode
-hating my life less fr fr
-more rigs when i care lol or when someone ask
+more modded star glitcher from shade hub modes [done]
+better ui [working on but is very hard to do]
+hat drop mode [may not add]
+200 under map mode [may not add]
+hating my life less fr fr [done]
+more rigs when i care lol or when someone ask [done]
+---------------------------------------------------------------------------------------------------------------------------------------
+more hubs
+more aniamtions
+showing all the id's in the console
+more fixed versions of animations with offsale/del items
 some other things
 ]]
 
+warn[[ the updated rigs are gone for a bit due to patchma hub being bugged will come back soon for now only using the normal patchma rigs ]]
 --      :::    :::           :::        ::::::::       :::    :::       ::::::::::       :::::::::         :::   :::           :::        ::::    :::           :::    :::      :::    :::       ::::::::: 
 --     :+:    :+:         :+: :+:     :+:    :+:      :+:   :+:        :+:              :+:    :+:       :+:+: :+:+:        :+: :+:      :+:+:   :+:           :+:    :+:      :+:    :+:       :+:    :+: 
 --    +:+    +:+        +:+   +:+    +:+             +:+  +:+         +:+              +:+    +:+      +:+ +:+:+ +:+      +:+   +:+     :+:+:+  +:+           +:+    +:+      +:+    +:+       +:+    +:+  
@@ -190,7 +214,7 @@ game.StarterGui:SetCore("SendNotification", {
 
 	})
 
---no need to get and index the library tables with function names every time the script uses them
+--no need to get and index the library tables with function names every time the script uses themlocal osclock=os.clock
 game=workspace.Parent
 local osclock=os.clock
 local tspawn=task.spawn
@@ -203,14 +227,14 @@ local mrandom=math.random
 local sin=math.sin
 local cos=math.cos
 local abs=math.abs
-local rad=math.rad
 local min=math.min
+local max=math.max
 local clamp=math.clamp
+local round=math.round
 local tinsert=table.insert
 local tclear=table.clear
 local tclone=table.clone
 local tfind=table.find
-local tunpack=table.unpack
 
 --the script doesnt have to read global varaibles every time to get them
 --why not have them saved in local varaibles for faster access times
@@ -220,6 +244,7 @@ local xpcall=xpcall
 local type=type
 local typeof=typeof
 local game=game
+local replicatesignal=replicatesignal
 
 local i=Instance.new 
 local v2=Vector2.new 
@@ -236,30 +261,30 @@ local csk=ColorSequenceKeypoint.new
 
 local sine=osclock()
 local deltaTime=0
-local v3_0=v3(0,0,0)
+local v3_0=v3()
 local v3_101=v3(1,0,1)
 local v3_010=v3(0,1,0)
 local v3_001=v3(0,0,1)
-local cf_0=cf(0,0,0)
+local cf_0=cf()
 local v3_xz=v3_101*10
 local v3_xzL=v3_101*250.1
 local v3_net=v3_010*25.01
+local pdloadedtime=nil
 
 --not "local function rs" to not assign debug names
-local rs=function(l) 
-	l=l or mrandom(8,15) 
-	local s="" 
-	for i=1,l do 
-		if mrandom(1,2)==1 then 
-			s=s..schar(mrandom(65,90)) 
-		else 
-			s=s..schar(mrandom(97,122)) 
-		end 
-	end 
-	return s 
+local rs=function()
+	local s=""
+	for i=1,mrandom(8,15) do
+		if mrandom(2)==2 then
+			s=s..schar(mrandom(65,90))
+		else
+			s=s..schar(mrandom(97,122))
+		end
+	end
+	return s
 end
 
---it runs even faster if u call __index and __newindex of metatables of userdata directly
+--it runs even faster if u call __index and __newindex metamethods directly
 local getMetamethodFromErrorStack=function(userdata,f,test)
 	local ret=nil
 	xpcall(f,function()
@@ -300,7 +325,9 @@ local sg=FindFirstChildOfClass(game,"StarterGui")
 local lp=insGet(plrs,"LocalPlayer")
 local pg=FindFirstChildOfClass(lp,"PlayerGui")
 local mouse=insGet(lp,"GetMouse")(lp)
-local stepped=insGet(rus,"Stepped")
+local cdsb=insGet(lp,"ConnectDiedSignalBackend")
+local rst=insGet(plrs,"RespawnTime")+0.07 --1/15
+local preanimation=insGet(rus,"PreAnimation")
 local heartbeat=insGet(rus,"Heartbeat")
 local renderstepped=insGet(rus,"RenderStepped")
 
@@ -324,7 +351,7 @@ local guiTheme={
 	guiTitle="HackerMan Hub",
 	windowTitleColor=c3(0,0.5,0),
 	windowTopColor=c3(0,0,0),
-	windowBottomColor=c3(1,1,1),
+	windowBottomColor=c3(0.3,0.3,0.3),
 	windowMinimizedSize={X=270,Y=22},
 	windowRegularSize={X=270,Y=390},
 	buttonsTextColor=c3(0.4,0.4,0.4),
@@ -334,8 +361,14 @@ local guiTheme={
 }
 
 local accessorylimbs={
-	{meshid="11263221350",textureid="11263219250",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Leg"},
-	{meshid="11159370334",textureid="11159284657",C0=angles(-1.5707963267948966,0,1.5707963267948966),Name="Right Leg"},
+	{meshid="117287001096396",textureid="",C0=cf_0,Name="Left Arm"},
+	{meshid="117287001096396",textureid="",C0=cf_0,Name="Right Arm"},
+
+	{meshid="90736849096372",textureid="",C0=angles(0,0,1.5707963267948966),Name="Left Arm"},
+	{meshid="105141400603933",textureid="",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
+
+	{meshid="11263221350",textureid="11263219250",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Arm"},
+	{meshid="11159370334",textureid="11159284657",C0=angles(-1.5707963267948966,0,1.5707963267948966),Name="Right Arm"},
 
 	{meshid="14255522247",textureid="",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Arm"},
 	{meshid="14255522247",textureid="",C0=angles(-1.5707963267948966,0,1.5707963267948966),Name="Right Arm"},
@@ -343,61 +376,20 @@ local accessorylimbs={
 	{meshid="17374767929",textureid="",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Arm"},
 	{meshid="17374767929",textureid="",C0=angles(-1.5707963267948966,0,1.5707963267948966),Name="Right Arm"},
 
-	{meshid="18640914129",textureid="18640914168",C0=angles(rad(0),rad(0),rad(-180)),Name="Left Arm"},
-	{meshid="18640914129",textureid="18640914168",C0=angles(rad(0),rad(0),rad(-180)),Name="Right Arm"},
-
-	{meshid="99608462237958",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
-	{meshid="139733645770094",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
-
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
-
-	{meshid="137702817952968",textureid="135650240593878",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
-	{meshid="137702817952968",textureid="135650240593878",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
-
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
-
-	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
-	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
-
-	{meshid="139733645770094",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
-	{meshid="99608462237958",textureid="130809869695496",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
-	{meshid="18124482581",textureid="18124477101",C0=angles(rad(0),rad(90),rad(0)),Name="Right Arm"},
-
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
-	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
-
 	{meshid="12344207333",textureid="",C0=angles(2,0,0),Name="Left Arm"},
 	{meshid="12344206657",textureid="",C0=angles(2,0,0),Name="Right Arm"},
 
-	{meshid="13831073174",textureid="",C0=cfMul(cf(0.017,0,-0.23),angles(-1.4835298641951802,-0.15707963267948966,2.199114857512855)),Name="Left Arm"},
-	{meshid="13839903766",textureid="",C0=cfMul(cf(0,-0.62,-0.01),angles(1.6580627893946132,0.15707963267948966,-2.199114857512855)),Name="Right Arm"},
+	{meshid="13831073174",textureid="",C0=cf(0.017,0,-0.23)*angles(-1.4835298641951802,-0.15707963267948966,2.199114857512855),Name="Left Arm"},
+	{meshid="13839903766",textureid="",C0=cf(0,-0.62,-0.01)*angles(1.6580627893946132,0.15707963267948966,-2.199114857512855),Name="Right Arm"},
+
+	{meshid="121304376791439",textureid="",C0=cf_0,Name="Left Leg"},
+	{meshid="121304376791439",textureid="",C0=cf_0,Name="Right Leg"},
 
 	{meshid="11159370334",textureid="11159285454",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Leg"},
 	{meshid="12652772399",textureid="12652775021",C0=cf(0,-0.125,0),Name="Right Leg"},
 
-	{meshid="18640901641",textureid="18640901676",C0=angles(rad(0),rad(0),rad(-180)),Name="Left Leg"},
-	{meshid="18640901641",textureid="18640901676",C0=angles(rad(0),rad(0),rad(180)),Name="Right Leg"},
-
-	{meshid="18400530688",textureid="18400548452",C0=cf(0,-0.55,0),Name="Right Leg"},
-	{meshid="18615136546",textureid="18615141631",C0=cf(0,-0.55,0),Name="Right Leg"},
-	{meshid="109623659028540",textureid="117918080152423",C0=cf(0,-0.55,0),Name="Right Leg"},
-
-	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
-	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
-
-	{meshid="137702817952968",textureid="73798034827573",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
-	{meshid="137702817952968",textureid="73798034827573",C0=angles(rad(0),rad(0),rad(90)),Name="Left Leg"},
-
-	{meshid="117287001096396",textureid="120169691545791",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
-	{meshid="117287001096396",textureid="120169691545791",C0=angles(rad(0),rad(0),rad(90)),Name="Right Leg"},
-
-	{meshid="117287001096396",textureid="120169691545791",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
-	{meshid="117287001096396",textureid="120169691545791",C0=angles(0,0,1.5707963267948966),Name="Left Leg"},
-
-	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Left Arm"},
-	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
+	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Left Leg"},
+	{meshid="14768684979",textureid="",C0=angles(0,0,1.5707963267948966),Name="Right Leg"},
 
 	{meshid="17387586286",textureid="",C0=angles(1.5707963267948966,0,1.5707963267948966),Name="Left Leg"},
 	{meshid="17387586286",textureid="",C0=angles(-1.5707963267948966,0,1.5707963267948966),Name="Right Leg"},
@@ -405,21 +397,20 @@ local accessorylimbs={
 	{meshid="14768666349",textureid="",C0=cf_0,Name="Torso"},
 	{meshid="14241018198",textureid="",C0=cf_0,Name="Torso"},
 	{meshid="13421774668",textureid="",C0=cf_0,Name="Torso"},
-	{meshid="110684113028749",textureid="70661572547971",C0=cf_0,Name="Torso"},
-	{meshid="127552124837034",textureid="131014325980101",C0=cf_0,Name="Torso"},
-	{meshid="126825022897778",textureid="125975972015302",C0=cf_0,Name="Torso"},
-	{meshid="110684113028749",textureid="70661572547971",C0=cf_0,Name="Torso"},
+	{meshid="110684113028749",textureid="",C0=cf_0,Name="Torso"},
+	{meshid="127552124837034",textureid="",C0=angles(0,0,1.5707963267948966),Name="Torso"},
 
-	{meshid="4324138105",textureid="4324138210",C0=cfMul(angles(-1.6144295580947547,1.5707963267948966,0),cf(-0.125,0.3,0)),Name="Left Arm"},
-	{meshid="4154474745",textureid="4154474807",C0=cfMul(angles(1.5271630954950384,-1.5707963267948966,0),cf(-0.125,-0.3,0)),Name="Left Arm"},
-	{meshid="3030546036",textureid="3650191503",C0=cfMul(angles(1.5271630954950384,1.5707963267948966,0),cf(0.125,-0.3,0)),Name="Right Arm"},
-	{meshid="3030546036",textureid="3443321249",C0=cfMul(angles(-1.6144295580947547,-1.5707963267948966,0),cf(0.125,0.3,0)),Name="Right Arm"},
-	{meshid="3030546036",textureid="3360974849",C0=cfMul(angles(1.5271630954950384,1.5707963267948966,0),cf(-0.125,-0.35,0)),Name="Left Leg"},
-	{meshid="3030546036",textureid="3360978739",C0=cfMul(angles(-1.6144295580947547,-1.5707963267948966,0),cf(-0.125,0.3,0)),Name="Left Leg"},
-	{meshid="3030546036",textureid="3033898741",C0=cfMul(angles(1.5271630954950384,-1.5707963267948966,0),cf(0.125,-0.35,0)),Name="Right Leg"},
-	{meshid="3030546036",textureid="3409604993",C0=cfMul(angles(-1.6144295580947547,1.5707963267948966,0),cf(0.125,0.3,0)),Name="Right Leg"},
+	{meshid="4324138105",textureid="4324138210",C0=angles(-1.6144295580947547,1.5707963267948966,0)*cf(-0.125,0.3,0),Name="Left Arm"},
+	{meshid="4154474745",textureid="4154474807",C0=angles(1.5271630954950384,-1.5707963267948966,0)*cf(-0.125,-0.3,0),Name="Left Arm"},
+	{meshid="3030546036",textureid="3650191503",C0=angles(1.5271630954950384,1.5707963267948966,0)*cf(0.125,-0.3,0),Name="Right Arm"},
+	{meshid="3030546036",textureid="3443321249",C0=angles(-1.6144295580947547,-1.5707963267948966,0)*cf(0.125,0.3,0),Name="Right Arm"},
+	{meshid="3030546036",textureid="3360974849",C0=angles(1.5271630954950384,1.5707963267948966,0)*cf(-0.125,-0.35,0),Name="Left Leg"},
+	{meshid="3030546036",textureid="3360978739",C0=angles(-1.6144295580947547,-1.5707963267948966,0)*cf(-0.125,0.3,0),Name="Left Leg"},
+	{meshid="3030546036",textureid="3033898741",C0=angles(1.5271630954950384,-1.5707963267948966,0)*cf(0.125,-0.35,0),Name="Right Leg"},
+	{meshid="3030546036",textureid="3409604993",C0=angles(-1.6144295580947547,1.5707963267948966,0)*cf(0.125,0.3,0),Name="Right Leg"},
 	{meshid="4819720316",textureid="4819722776",C0=angles(0,0,0.2617993877991494),Name="Torso"}
 }
+
 
 local gp=function(p,n,cl)
 	for i,v in next,GetChildren(p) do
@@ -437,14 +428,11 @@ local timegp=function(p,n,c,t)
 				return v
 			end
 		end
-		Wait(stepped)
+		Wait(preanimation)
 	end
 	return nil
 end
 local makeplaceholder=function(v)
-	if typeof(v)~="Instance" then
-		return nil
-	end
 	if not insGet(v,"Archivable") then
 		insSet(v,"Archivable",true)
 	end
@@ -461,7 +449,6 @@ local makeplaceholder=function(v)
 	insSet(v,"Anchored",true)
 	insSet(v,"CanCollide",false)
 	insSet(v,"Transparency",0.25)
-	insSet(v,"Parent",ws)
 	return v
 end
 local emptyfunction=function() end
@@ -484,13 +471,13 @@ insSet(i1,"Position",u2(0.5,0,0.5,guiTheme.windowRegularSize.Y/-2))
 insSet(i1,"Size",u2(0,guiTheme.windowRegularSize.X,0,guiTheme.windowRegularSize.Y))
 insSet(i1,"Name",rs())
 insSet(i1,"Parent",i10)
-insSet(i2,"BackgroundColor3",c3(0,0,0))
+insSet(i2,"BackgroundColor3",c3(1,1,1))
 insSet(i2,"BorderSizePixel",0)
 insSet(i2,"Size",u2(0,guiTheme.windowRegularSize.X,0,guiTheme.windowRegularSize.Y))
 insSet(i2,"Name",rs())
 insSet(i2,"Parent",i1)
 insSet(i3,"BackgroundColor3",c3(1,1,1))
-insSet(i3,"BorderSizePixel",1)
+insSet(i3,"BorderSizePixel",0)
 insSet(i3,"Position",u2(0,5,0,guiTheme.windowMinimizedSize.Y-2))
 insSet(i3,"Size",u2(1,-10,0,guiTheme.windowRegularSize.Y-guiTheme.windowMinimizedSize.Y-3))
 insSet(i3,"Name",rs())
@@ -501,7 +488,7 @@ insSet(i4,"BorderSizePixel",0)
 insSet(i4,"Size",u2(1,-3,1,0))
 insSet(i4,"AutomaticCanvasSize",e.AutomaticSize.Y)
 insSet(i4,"CanvasSize",u2(0,0,0,0))
-insSet(i4,"ScrollBarThickness",4)
+insSet(i4,"ScrollBarThickness",7)
 insSet(i4,"Name",rs())
 insSet(i4,"Parent",i3)
 insSet(i5,"Name",rs())
@@ -655,7 +642,7 @@ local Draggable=function(window,obj)
 			local con3 = nil
 			con3 = Connect(insGet(d,"AncestryChanged"),function()
 				if not IsDescendantOf(d,window) then
-					if thisEntered then
+					if thisAdded then
 						activeEntered = activeEntered - 1
 					end
 					Disconnect(con0)
@@ -713,9 +700,8 @@ end
 
 Draggable(i1)
 
-lbl("By DeBug-X Team").TextColor3=c3(0,0.5,0)
-lbl("update the old and add the new").TextColor3=c3(0,0.5,0)
-lbl("----------------------------------------------------------------------").TextColor3=c3(0,0,0)
+lbl("by MyWorld")
+lbl("discord.gg/QMy5f6DrbH")
 
 local allowshiftlock=nil
 local ctrltp=nil
@@ -733,6 +719,9 @@ local c=nil
 local stopreanimate=function() 
 	if c then
 		c=nil
+		if replicatesignal then
+			replicatesignal(cdsb)
+		end
 		return true
 	end
 	return false
@@ -740,8 +729,7 @@ end
 local reanimate=function()
 	--[[
 		FDless reanimate by MyWorld
-		aka no client sided instances
-		"what else do i optimize here"
+		optimize the optimized
 	]]
 
 	local novoid = true --prevents parts from going under workspace.FallenPartsDestroyHeight if you control them
@@ -932,9 +920,17 @@ local reanimate=function()
 	}
 
 	local getPart=function(name,blacklist)
-		for i,v in next,cframes do
-			if (i.Name==name) and not (blacklist and tfind(blacklist,i)) then
-				return i
+		if blacklist then
+			for i,v in next,cframes do
+				if (i.Name==name) and not tfind(blacklist,i) then
+					return i
+				end
+			end
+		else
+			for i,v in next,cframes do
+				if i.Name==name then
+					return i
+				end
 			end
 		end
 		return nil
@@ -995,7 +991,7 @@ local reanimate=function()
 	end
 
 	local raycastparams=rp()
-	raycastparams.FilterType=e.RaycastFilterType.Blacklist
+	raycastparams.FilterType=e.RaycastFilterType.Exclude
 	raycastparams.RespectCanCollide=true
 	local rayfilter={}
 	local characters={}
@@ -1059,20 +1055,17 @@ local reanimate=function()
 					else
 						return
 					end
-					local found=false
 					for i,_ in next,cframes do
 						if (meshid==i.m) and (textureid==i.t) then
 							local p1=i.p
 							if p1 and IsDescendantOf(p1,c) then
 								if p1==p then
-									found=true
-									break
+									return
 								end
 							else
-								found=true
 								i.p=p
 								makePartCons(p,i)
-								break
+								return
 							end
 						else
 							local j=i.j
@@ -1088,36 +1081,32 @@ local reanimate=function()
 								j.C1=v1[2]
 								j.Part1=v1[1]
 								tinsert(joints,j)
-								found=true
-								break
+								return
 							end
 						end
 					end
-					if not found then
-						for i,l in next,accessorylimbs do
-							if l.p and sfind(meshid,l.meshid) and sfind(textureid,l.textureid) then
-								local t={Name=insGet(p,"Name"),l=insGet(p,"Position"),m=meshid,t=textureid,p=p}
-								makePartCons(p,t)
-								if placeholders then
-									t.v=makeplaceholder(p)
-								end
-								cframes[t]=insGet(p,"CFrame")
-								tinsert(joints,{Part0=t,Part1=l.p,C0=l.C0,C1=cf_0})
-								l.p=nil
-								found=true
-								break
-							end
-						end
-						if not found then
+					for i,l in next,accessorylimbs do
+						if l.p and sfind(meshid,l.meshid) and sfind(textureid,l.textureid) then
 							local t={Name=insGet(p,"Name"),l=insGet(p,"Position"),m=meshid,t=textureid,p=p}
 							makePartCons(p,t)
 							if placeholders then
 								t.v=makeplaceholder(p)
+								t.b=false
 							end
 							cframes[t]=insGet(p,"CFrame")
-							tinsert(joints,{Part0=t,Part1=v1[1],C0=insGet(v,"CFrame"),C1=v1[2]})
+							tinsert(joints,{Part0=t,Part1=l.p,C0=l.C0,C1=cf_0})
+							l.p=nil
+							return
 						end
 					end
+					local t={Name=insGet(p,"Name"),l=insGet(p,"Position"),m=meshid,t=textureid,p=p}
+					makePartCons(p,t)
+					if placeholders then
+						t.v=makeplaceholder(p)
+						t.b=false
+					end
+					cframes[t]=insGet(p,"CFrame")
+					tinsert(joints,{Part0=t,Part1=v1[1],C0=insGet(v,"CFrame"),C1=v1[2]})
 				end
 			end
 		end
@@ -1150,10 +1139,25 @@ local reanimate=function()
 					c=newc
 					local fi,fv=next(flingtable)
 					if fi then
-						if flingchangestate then
+						if replicatesignal and not pdloadedtime then
+							replicatesignal(cdsb)
+							pdloadedtime=osclock()+rst
+						end
+						if flingchangestate==3 then
 							local hum=FindFirstChildOfClass(c,"Humanoid")
 							if hum then
 								insGet(hum,"ChangeState")(hum,e.HumanoidStateType.Physics)
+								insGet(hum,"SetStateEnabled")(hum,e.HumanoidStateType.Seated,false)
+							end
+						elseif flingchangestate==1 then
+							local hum=FindFirstChildOfClass(c,"Humanoid")
+							if hum then
+								insGet(hum,"ChangeState")(hum,e.HumanoidStateType.Physics)
+							end
+						elseif flingchangestate==2 then
+							local hum=FindFirstChildOfClass(c,"Humanoid")
+							if hum then
+								insGet(hum,"SetStateEnabled")(hum,e.HumanoidStateType.Seated,false)
 							end
 						end
 						for i,v in next,tclone(flingtable) do
@@ -1189,7 +1193,7 @@ local reanimate=function()
 						insSet(hrp,"AssemblyLinearVelocity",v3_0)
 						insSet(hrp,"AssemblyAngularVelocity",v3_0)
 						insSet(hrp,"CFrame",cfr)
-						twait(0.16)
+						twait(0.17)
 					end
 					if respawntp==1 then
 						local startpos=pos+v3(mrandom(-32,32),0,mrandom(-32,32))
@@ -1216,14 +1220,77 @@ local reanimate=function()
 						insSet(hrp,"CFrame",startpos)
 						insSet(hrp,"AssemblyLinearVelocity",v3_0)
 						insSet(hrp,"AssemblyAngularVelocity",v3_0)
-						twait(0.16)
+						twait(0.17)
+						elseif respawntp ==4 then
+							local startpos = pos + v3(mrandom(-32, 32), 0, mrandom(-32, 32))
+							local dir = nil
+							local poscheck = true
+							while poscheck do
+								poscheck = false
+								for i, v in next, rootparts do
+									local diff = (startpos - insGet(v, "Position")) * v3_101
+									if v3Get(diff, "Magnitude") < 10 then
+				    				poscheck = true
+				   					dir = dir or (v3Get(diff, "Unit") * 3)
+				   					startpos = startpos + dir
+			  					end
+							 end
+							 local diff = (startpos - pos) * v3_101
+		 					if v3Get(diff, "Magnitude") < 10 then
+			 				poscheck = true
+			  				dir = dir or (v3Get(diff, "Unit") * 3)
+			  				startpos = startpos + dir
+		 				end
+					end
+
+					-- adds or subracts X amount units to the y-coord
+					startpos = startpos + v3(0, -200, 0)
+
+						startpos = cfAdd(cfGet(cfr, "Rotation"), startpos)
+						insSet(hrp, "CFrame", startpos)
+						insSet(hrp, "AssemblyLinearVelocity", v3_0)
+						insSet(hrp, "AssemblyAngularVelocity", v3_0)
+						twait(0.2501)
+						elseif respawntp ==5 then
+							local startpos = pos + v3(mrandom(-32, 32), 0, mrandom(-32, 32))
+							local dir = nil
+							local poscheck = true
+							while poscheck do
+								poscheck = false
+								for i, v in next, rootparts do
+									local diff = (startpos - insGet(v, "Position")) * v3_101
+									if v3Get(diff, "Magnitude") < 10 then
+				    				poscheck = true
+				   					dir = dir or (v3Get(diff, "Unit") * 3)
+				   					startpos = startpos + dir
+			  					end
+							 end
+							 local diff = (startpos - pos) * v3_101
+		 					if v3Get(diff, "Magnitude") < 10 then
+			 				poscheck = true
+			  				dir = dir or (v3Get(diff, "Unit") * 3)
+			  				startpos = startpos + dir
+		 				end
+					end
+
+					-- adds or subracts X amount units to the y-coord
+					startpos = startpos + v3(0, 200, 0)
+
+						startpos = cfAdd(cfGet(cfr, "Rotation"), startpos)
+						insSet(hrp, "CFrame", startpos)
+						insSet(hrp, "AssemblyLinearVelocity", v3_0)
+						insSet(hrp, "AssemblyAngularVelocity", v3_0)
+						twait(0.2501)
 					elseif respawntp==2 then
 						insSet(hrp,"CFrame",cfAdd(cfr,cfGet(cfr,"RightVector")*3.5-cfGet(cfr,"LookVector")*3.5))
 						insSet(hrp,"AssemblyLinearVelocity",v3_0)
 						insSet(hrp,"AssemblyAngularVelocity",v3_0)
-						twait(0.16)
+						twait(0.17)
 					elseif respawntp==3 then
-						local t=osclock()+0.16
+						local t=osclock()+0.17
+						if pdloadedtime and pdloadedtime>t then
+							t=pdloadedtime
+						end
 						local startcf=cfAdd(cfMul(cfGet(cfr,"Rotation"),angles(1.5707963267948966,0,0)),pos*v3_101+v3_010*min(fpdh+30,v3Get(pos,"Y")-5))
 						while twait() do
 							insSet(hrp,"CFrame",startcf)
@@ -1240,6 +1307,12 @@ local reanimate=function()
 					primarypart=insGet(newc,"PrimaryPart") or hrp
 					if hidedeatheffect and GetCoreGuiEnabled(sg,enumH) then
 						SetCoreGuiEnabled(sg,enumH,false)
+					end
+					if pdloadedtime then
+						if (osclock()<pdloadedtime) then
+							twait(pdloadedtime-osclock())
+						end
+						pdloadedtime=nil
 					end
 					if breakjointsmethod==1 then
 						insGet(newc,"BreakJoints")(newc)
@@ -1300,7 +1373,7 @@ local reanimate=function()
 		end
 	end
 
-	local mradN05=rad(-0.5)
+	local mradN05=-0.008726646259971648
 	local KeyCode=e.KeyCode
 	local enumMB2=e.UserInputType.MouseButton2
 	local enumMLCP=e.MouseBehavior.LockCurrentPosition
@@ -1584,18 +1657,21 @@ local reanimate=function()
 		if not IsDescendantOf(target,ws) then
 			return false
 		end
-		if IsA(target,"Humanoid") or IsA(target,"BasePart") then 
+		if IsA(target,"BasePart") or IsA(target,"Humanoid") then 
 			target=insGet(target,"Parent") 
 			if IsA(target,"Accessory") then
 				target=insGet(target,"Parent")
 			end
 		end
-		if (target==c) or (not IsA(target,"Model")) then
+		if (not IsA(target,"Model")) or (target==c) then
 			return false
 		end
 		local targetpart=gp(target,"HumanoidRootPart","BasePart") or gp(target,"Torso","BasePart") or gp(target,"UpperTorso","BasePart")
 		if (not targetpart) or (flingtable[targetpart]~=nil) then
 			return false
+		end
+		if replicatesignal then
+		    replicatesignal(cdsb)
 		end
 		if highlightflingtargets then
 			local h=i("Highlight")
@@ -1997,40 +2073,49 @@ local reanimate=function()
 		refreshjointsI(rootpart)
 		tclear(refreshedjoints)
 
-		local idlerv=v3(sin((sine-0.0375)*16),sin(sine*16),sin((sine+0.075)*16))
-		local idleoff=idlerv*0.0015
+		local sine15=sine*15
+		local idlerv=v3(sin(sine15),sin(sine15+1.0471975511965976),sin(sine15+2.0943951023931953))
+		local idleoff=idlerv*0.003910064697265625 --0.0156402587890625/4
 
 		local claimpos=insGet(primarypart,"Position")
 		local claimposY=v3Get(claimpos,"Y")
 		for i,v in next,cframes do
 			local part=i.p
-			
+
 			if part then
 				if insGet(part,"ReceiveAge")==0 then
 					local placeholder=i.v
-					if novoid and (cfGet(v,"Y")<novoid) then
-						v=cfAdd(v,v3_010*(novoid-cfGet(v,"Y")))
+					local vpos=cfGet(v,"Position")
+					if novoid and (v3Get(vpos,"Y")<novoid) then
+						v=cfAdd(v,v3_010*(novoid-v3Get(vpos,"Y")))
 					end
 					local lastpos=i.l
-					local vel=(cfGet(v,"Position")-lastpos)/delta
+					local vel=(vpos-lastpos)/delta
 					local mag=v3Get(vel,"Magnitude")
-					if mag<0.15 then
-						if placeholder then
+					if mag<0.11730194091796875 then --0.0156402587890625*15/2
+						if placeholder and i.b then
 							insSet(placeholder,"Parent",nil)
+							i.b=false
 						end
 						i.l=cfGet(v,"Position")
 						v=cfAdd(v,idleoff)
 					elseif mag>speedlimit then
 						if placeholder then
 							insSet(placeholder,"CFrame",v)
-							insSet(placeholder,"Parent",ws)
+							if not i.b then
+								insSet(placeholder,"Parent",ws)
+								i.b=true
+							end
 						end
 						vel=v3Get(vel,"Unit")*speedlimit
 						local newpos=lastpos+vel*delta
 						v=cfAdd(cfGet(v,"Rotation"),newpos)
 						i.l=newpos
-					elseif placeholder then
-						insSet(placeholder,"Parent",nil)
+					else
+						if placeholder and i.b then
+							insSet(placeholder,"Parent",nil)
+							i.b=false
+						end
 						i.l=cfGet(v,"Position")
 					end
 					local claimtime=i.c
@@ -2073,14 +2158,20 @@ local reanimate=function()
 					local placeholder=i.v
 					if placeholder then
 						insSet(placeholder,"CFrame",v)
-						insSet(placeholder,"Parent",ws)
+						if not i.b then
+							insSet(placeholder,"Parent",ws)
+							i.b=true
+						end
 					end
 				end
 			else
 				local placeholder=i.v
 				if placeholder then
 					insSet(placeholder,"CFrame",v)
-					insSet(placeholder,"Parent",ws)
+					if not i.b then
+						insSet(placeholder,"Parent",ws)
+						i.b=true
+					end
 				end
 			end
 		end
@@ -2103,7 +2194,17 @@ local reanimate=function()
 	local raycastlegs=function() --this returns 2 values: right leg raycast offset, left leg raycast offset
 		local rY=Raycast(ws,cfGet(cfMul(cfr,legcfR),"Position"),raydir,raycastparams)
 		local lY=Raycast(ws,cfGet(cfMul(cfr,legcfL),"Position"),raydir,raycastparams)
-		return rY and (v3Get(rY.Position,"Y")-(v3Get(pos,"Y")-3)) or 0,lY and (v3Get(lY.Position,"Y")-(v3Get(pos,"Y")-3)) or 0
+		if rY then
+			if lY then
+				return v3Get(rY.Position,"Y")-(v3Get(pos,"Y")-3),v3Get(lY.Position,"Y")-(v3Get(pos,"Y")-3)
+			else
+				return v3Get(rY.Position,"Y")-(v3Get(pos,"Y")-3),0
+			end
+		elseif lY then
+			return 0,v3Get(lY.Position,"Y")-(v3Get(pos,"Y")-3)
+		else
+			return 0,0
+		end
 	end
 
 	local velbycfrvec=function() --this returns 2 values: forward/backwards movement (from -1 to 1), right/left movement (from -1 to 1)
@@ -2140,7 +2241,7 @@ local reanimate=function()
 	end
 
 	local glitchJoint=function(joint,targetGlitchTime,delayFrom,delayTo,radiansFrom,radiansTo) 
-		if sine>targetGlitchTime then --local glitchtime=0 addMode("x",{idle=function() glitchtime=glitchJoint(joint,glitchtime,0.2,0.4,-0.1,0.1) end})
+		if sine>targetGlitchTime then --example usage: local glitchtime=0 addMode("x",{idle=function() glitchtime=glitchJoint(joint,glitchtime,0.2,0.4,-0.1,0.1) end})
 			radiansFrom=radiansFrom*100
 			radiansTo=radiansTo*100
 			joint.C0=cfMul(joint.C0,angles(mrandom(radiansFrom,radiansTo)/100,mrandom(radiansFrom,radiansTo)/100,mrandom(radiansFrom,radiansTo)/100)) 
@@ -2219,6 +2320,7 @@ local reanimate=function()
 		setHipHeight=setHipHeight
 	}
 end
+
 lbl("Emoter & so sigma kustom").TextColor3=c3(0.45,1,0.50)
 btn("CUSTOM w/ sword ", function()
 	local t=reanimate()
@@ -21900,153 +22002,8 @@ game.StarterGui:SetCore("SendNotification", {
 		end
 	})
 end)
-lbl("^^^ By HackerMan Hub Team ^^^").TextColor3=c3(0,0.5,0)
-lbl("verison = 1").TextColor3=c3(1,1,1)
-lbl("Misc").TextColor3=c3(1,1,1)
-btn("empty reanimate (no animations)", reanimate).TextColor3=c3(0.6,0,0)
 
-btn("Destroy UI",function()
-	i1:Destroy()
-    i2:Destroy()
-    i3:Destroy()
-    i4:Destroy()
-    i5:Destroy()
-    i6:Destroy()
-    i7:Destroy()
-    i8:Destroy()
-    i9:Destroy()
-    stopreanimate()
-end).TextColor3=c3(0.8,0,0)
-
-btn("Rejoin Game",function()
-	local ts = game:GetService("TeleportService")
-	local p = game:GetService("Players").LocalPlayer
-	ts:Teleport(game.PlaceId, p)
-end).TextColor3=c3(0.8,0,0)
-
-btn("Reset True char",function()
-	stopreanimate()
-end).TextColor3=c3(0.8,0,0)
-
-insSet(btn("stop animation",stopreanimate),"TextColor3",c3(1,0,0))
-
-lbl("--------------------SETTINGS (REANIMATE TO APPLY)--------------------")
-
-local swtc=function(txt,options,onchanged)
-	local current=0
-	local swtcbtn=nil
-	local btnpressed=function()
-		current=current+1
-		if current>#options then
-			current=1
-		end
-		local option=options[current]
-		insSet(swtcbtn,"Text",txt..": "..option.text)
-		onchanged(option.value)
-	end
-	swtcbtn=btn("change",btnpressed)
-	btnpressed()
-	return swtcbtn
-end
-
-swtc("client sided placeholders",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	placeholders=v
-end)
-
-swtc("highlight fling targets",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	highlightflingtargets=v
-end)
-
-swtc("allow shiftlock",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	allowshiftlock=v
-end)
-
-swtc("ctrl click tp",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	ctrltp=v
-end)
-
-swtc("click fling",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	clickfling=v
-end)
-
-swtc("changestate when fling",{
-	{value=true,text="yes"},
-	{value=false,text="no"}
-},function(v)
-	flingchangestate=v
-end)
-lbl("(limb collision)")
-
-swtc("respawn tp",{
-	{value=3,text="hide body"},
-	{value=0,text="stay at spawn"},
-	{value=1,text="random tp close"},
-	{value=2,text="behind char"}
-},function(v)
-	respawntp=v
-end)
-
-local disguiscripts=nil
-swtc("new gui scripts",{
-	{value=true,text="disable"},
-	{value=false,text="keep"}
-},function(v)
-	disguiscripts=v
-end)
-Connect(insGet(pg,"DescendantAdded"),function(v)
-	if c and disguiscripts and IsA(v,"Script") then --mind Enum.RunContext.Client
-		insSet(v,"Disabled",true) 
-	end
-end)
-
-swtc("new character scripts",{
-	{value=function(v)
-		if IsA(v,"Script") then --mind Enum.RunContext.Client
-			insSet(v,"Disabled",true)
-		end
-	end,text="disable"},
-	{value=false,text="keep"}
-},function(v)
-	discharscripts=v
-end)
-
-swtc("breakjoints",{
-	{value=1,text="breakjoints+health"},
-	{value=2,text="health or breakjoints"},
-	{value=3,text="breakjoints"}
-},function(v)
-	breakjointsmethod=v
-end)
-
-swtc("coregui death effect",{
-	{value=true,text="disable"},
-	{value=false,text="dont modify"},
-},function(v)
-	hidedeatheffect=v
-end)
-
-swtc("set simulation radius",{
-	{value=true,text="yes"},
-	{value=false,text="no"},
-},function(v)
-	simrad=v
-end)
-btn("------------------------------------------------------------------------------------------------------------", function()
+btn("ban hammer test", function()
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Dev Msg";
 	Text = "this is a secret good job finding it! | this is a dev version tho so i will change things as i want and do what ever as its not made for the main hub and its just a meme";
@@ -22458,13 +22415,657 @@ game.StarterGui:SetCore("SendNotification", {
 		end
 	})
 end)
-local iscg,_=pcall(insSet,i10,"Parent",FindFirstChildOfClass(game,"CoreGui"))
-if not iscg then
+lbl("IN PUBLIC TESTING").TextColor3=c3(0,0.5,0)
+btn("NEW HATS > Immortality Lord", function()
+	local backup=accessorylimbs
+	accessorylimbs={
+		{meshid="111946216585470",textureid="85260593368362",C0=cf_0,Name="Torso"},
+		{meshid="92572400594624",textureid="117484156735788",C0=angles(0,3.14,0),Name="Head"},
+		{meshid="92572400594624",textureid="117484156735788",C0=cf(1.50995803e-08,-1.07200003,-0.100000001,-1,0,1.50995803e-07,0,1,0,-1.50995803e-07,0,-1),Name="Head"},
+		{meshid="117649985156221",textureid="103757531289975",C0=angles(0,0,1.5707963267948966),Name="Left Arm"},
+		{meshid="93749227415046",textureid="103757531289975",C0=angles(0,0,1.5707963267948966),Name="Right Arm"},
+		{meshid="137156465227879",textureid="103160995675216",C0=angles(0,0,1.5707963267948966),Name="Left Leg"},
+		{meshid="76010149115685",textureid="103160995675216",C0=angles(0,0,1.5707963267948966),Name="Right Leg"}
+	}
+	local t=reanimate()
+	accessorylimbs=backup
+	if type(t)~="table" then return end
+	local getJoint=t.getJoint
+	local RootJoint=getJoint("RootJoint")
+	local RightShoulder=getJoint("Right Shoulder")
+	local LeftShoulder=getJoint("Left Shoulder")
+	local RightHip=getJoint("Right Hip")
+	local LeftHip=getJoint("Left Hip")
+	local Neck=getJoint("Neck")
+	local getVel=t.getVel
+	local setCfr=t.setCfr
+	local getCamCF=t.getCamCF
+	local cframes=t.cframes
+	local joints=t.joints
+	local getAccWeldFromMesh=t.getAccWeldFromMesh
+	local setWalkSpeed=t.setWalkSpeed
+	local fling=t.fling
+
+	Neck.C1=cf(0,-1,0,-1,0,0,0,0,1,0,1,-0)
+	RootJoint.C1=cf(0,0,0,-1,0,0,0,0,1,0,1,-0)
+	RightShoulder.C1=cf(-1,1,0,0,0,1,0,1,-0,-1,0,0)
+	LeftShoulder.C1=cf(1,1,0,0,0,-1,0,1,0,1,0,0)
+	RightHip.C1=cf(1,2,0,0,0,1,0,1,-0,-1,0,0)
+	LeftHip.C1=cf(-1,2,0,0,0,-1,0,1,0,1,0,0)
+
+	setWalkSpeed(32)
+	t.setJumpPower(0)
+	t.setHipHeight(7)
+	t.setGravity(math.huge)
+
+	local Gun={C0=cf_0}
+	local Sword={C0=cf_0}
+
+	local torso=t.getPart("Torso")
+	local rootpart=t.getPart("HumanoidRootPart")
+
+	local leftWingPart={}
+	cframes[leftWingPart]=cf_0
+
+	local leftWingAccWeld=getAccWeldFromMesh("17269814619","")
+	leftWingAccWeld.C0=angles(0,3.14,0)
+	leftWingAccWeld.C1=cf_0
+	leftWingAccWeld.Part1=leftWingPart
+
+	local LeftWing={
+		C0=cf(-.3,1,1)*angles(0,rad(90),0),
+		C1=cf(2.2,2,1.5),
+		Part0=torso,
+		Part1=leftWingPart
+	}
+	tinsert(joints,LeftWing)
+
+	local rightWingPart={}
+	cframes[rightWingPart]=cf_0
+
+	local rightWingAccWeld=getAccWeldFromMesh("17269824947","")
+	rightWingAccWeld.C0=angles(0,3.14,0)
+	rightWingAccWeld.C1=cf_0
+	rightWingAccWeld.Part1=rightWingPart
+
+	local RightWing={
+		C0=cf(.3,1,1)*angles(0,rad(90),0),
+		C1=cf(2.2,2,-1.5),
+		Part0=torso,
+		Part1=rightWingPart
+	}
+	tinsert(joints,RightWing)
+
+	local swordpart={}
+	cframes[swordpart]=cf_0
+
+	local swordAccWeld0=getAccWeldFromMesh("17326555172","")
+	swordAccWeld0.C0=cf(-0.0023765564,2.14191723,3.825109,-1,0,0,0,-0.519688249,-0.85435611,0,-0.854355931,0.519688308)
+	swordAccWeld0.C1=cf_0
+	swordAccWeld0.Part1=swordpart
+	local swordAccWeld1=getAccWeldFromMesh("17326476901","")
+	swordAccWeld1.C0=cf(-0.00237464905,-1.31204176,-3.18902349,-1,0,0,0,-0.519688249,-0.85435611,0,-0.854355931,0.519688308)
+	swordAccWeld1.C1=cf_0
+	swordAccWeld1.Part1=swordpart
+
+	local Sword={
+		C0=cf(0,-2,0)*angles(1.57,0,0),
+		C1=cf(0,-6.3,0),
+		Part0=t.getPart("Right Arm"),
+		Part1=swordpart
+	}
+	tinsert(joints,Sword)
+
+	local DefaultsNeckC0 = cf(0,2,0)*angles(rad(-90),0,rad(180))
+	local DefaultsRootJointC0 = angles(rad(-90),0,rad(180))
+	local DefaultsRightShoulderC0 = cf(-1,0,0)*angles(0,rad(90),0)
+	local DefaultsLeftShoulderC0 = cf(1,0,0)*angles(0,rad(-90),0)
+
+	local TimingSine=sine*60
+	local attacking=false
+	local animOverwrite=nil
+	local neckSnap=false
+
+	local Lerp1=function(a,b,c)
+		return Lerp(a,b,min(c*6*deltaTime,1))
+	end
+
+	local v3_030=v3_010*3
+	local flycf=nil
+	local flypos=nil
+	local charcf=cf_0
+	local animations=function(onground)		
+		TimingSine=sine*60
+		local vel=getVel()
+		local xzvel=vel*v3_101
+		if flycf then
+			if xzvel~=v3_0 then
+				local camrot=cfGet(getCamCF(),"Rotation")
+				local clv=cfGet(camrot,"LookVector")
+				local crv=cfGet(camrot,"RightVector")
+				local fw=v3Get(clv*v3_101,"Unit")*xzvel
+				fw=clv*(v3Get(fw,"X")+v3Get(fw,"Z"))
+				local rt=v3Get(crv*v3_101,"Unit")*xzvel
+				rt=crv*(v3Get(rt,"X")+v3Get(rt,"Z"))
+				flypos=flypos+v3Get(fw+rt,"Unit")*deltaTime*3.2
+				flycf=cfAdd(camrot,flypos)
+				charcf=cfAdd(flycf,cfGet(flycf,"UpVector")*3-v3_030)
+			end
+			cframes[rootpart]=flycf
+			setCfr(charcf)
+		elseif onground then
+			charcf=cframes[rootpart]
+		elseif cframes[rootpart].Y<charcf.Y then
+			local newcf=cframes[rootpart]
+			local lastY=cfGet(charcf,"Y")
+			charcf=cfAdd(cfGet(newcf,"Rotation"),v3(cfGet(newcf,"X"),lastY+(cfGet(newcf,"Y")-lastY)*deltaTime*0.6,cfGet(newcf,"Z")))
+			cframes[rootpart]=charcf
+			setCfr(charcf)
+		else
+			charcf=cframes[rootpart]
+		end
+		if attacking then
+			animOverwrite()
+		elseif xzvel~=v3_0 then
+			if neckSnap then
+				Neck.C0 = DefaultsNeckC0
+				neckSnap = false
+			else
+				Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+			end
+			if mrandom(15) == 1 then
+				Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+				neckSnap = true
+			end
+			if onground and not flycf then
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(-10),0,0)*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
+			else
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80+5*cos(TimingSine/25)),0,rad(45))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-0,-1)*angles(0,rad(170),rad(-10)),.25)
+			end
+			RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-sin(TimingSine/25))*angles(rad(20),0,0),.25)
+			LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(20),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+			RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+			LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+		else
+			RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-sin(TimingSine/25))*angles(rad(20),0,0),.25)
+			if neckSnap then
+				Neck.C0 = DefaultsNeckC0*angles(rad(20),rad(10*sin(TimingSine/50)),0)
+				neckSnap = false
+			else
+				Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0*angles(rad(20),rad(10*sin(TimingSine/50)),0),.25)
+			end
+			if mrandom(15) == 1 then
+				Neck.C0 = DefaultsNeckC0*angles(rad(20+mrandom(-20,20)),rad((10*sin(TimingSine/50))+mrandom(-20,20)),rad(mrandom(-20,20)))
+				neckSnap = true
+			end
+			if onground and not flycf then
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(-10),0,0)*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
+			else
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80+5*cos(TimingSine/25)),0,rad(45))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,0,-1)*angles(0,rad(170),rad(-10)),.25)
+			end
+			LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(20),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+			RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(10),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+			LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(20),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+		end
+		RightWing.C0 = Lerp1(RightWing.C0,cf(0.3,1,1)*angles(0,rad(105-25*cos(TimingSine/25)),0),.25)
+		LeftWing.C0 = Lerp1(LeftWing.C0,cf(-0.3,1,1)*angles(0,rad(75+25*cos(TimingSine/25)),0),.25)
+	end
+
+	local onKeyPressed=function(key)
+		if key=="f" then
+			if flycf then
+				flycf=nil
+				charcf=cf(flypos)
+				setCfr(charcf)
+			else
+				flypos=cfGet(cframes[rootpart],"Position")
+				flycf=cf(flypos)
+				charcf=flycf
+			end
+		elseif key=="z" then
+			if attacking then return end
+			attacking=true
+			setWalkSpeed(0)
+			animOverwrite=function()
+				RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-sin(TimingSine/25))*angles(rad(5),0,rad(-20)),.25)
+				if neckSnap then
+					Neck.C0 = DefaultsNeckC0
+					neckSnap = false
+				else
+					Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+				end
+				if mrandom(15) == 1 then
+					Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+					neckSnap = true
+				end
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80),0,rad(50))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(-1,-1,0)*angles(rad(180),rad(-90),0),.25)
+				LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(5),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+				RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+				LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+			end
+			twait(0.25)
+			local flingpos=cfGet(cfMul(cframes[rootpart],cf(0,0,-9)),"Position")
+			for i,v in next,GetDescendants(ws) do
+				if IsA(v,"Humanoid") then
+					local p=v.Parent
+					p=gp(p,"HumanoidRootPart","BasePart") or FindFirstChildWhichIsA(p,"BasePart")
+					if p and (v3Get(insGet(p,"Position")-flingpos,"Magnitude")<9) then
+						fling(v)
+					end
+				end
+			end
+			animOverwrite=function()
+				RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-sin(TimingSine/25))*angles(rad(5),0,rad(20)),.25)
+				if neckSnap then
+					Neck.C0 = DefaultsNeckC0
+					neckSnap = false
+				else
+					Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+				end
+				if mrandom(15) == 1 then
+					Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+					neckSnap = true
+				end
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(2,1,-1)*angles(rad(80),0,rad(-50))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(-1,-1,0)*angles(rad(180),rad(-90),0),.25)
+				LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(5),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+				RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+				LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+			end
+			twait(0.25)
+			setWalkSpeed(32)
+			attacking=false
+		elseif key=="x" then
+			attacking=true
+			setWalkSpeed(0)
+			local newpos=cfGet(insGet(mouse,"Hit"),"Position")+v3_010*10
+			local newcf=cfl(newpos,newpos+cfGet(getCamCF(),"LookVector")*v3_101)
+			animOverwrite=function()
+				RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-sin(TimingSine/25))*angles(rad(20),0,0),.25)
+				if neckSnap then
+					Neck.C0 = DefaultsNeckC0
+					neckSnap = false
+				else
+					Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+				end
+				if mrandom(15) == 1 then
+					Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+					neckSnap = true
+				end
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80+5*cos(TimingSine/25)),0,rad(45))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-0,-1)*angles(0,rad(170),rad(-10)),.25)
+				LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(20),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+				RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+				LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+			end
+			twait(0.5)
+			local animStart=sine
+			animOverwrite=function()
+				RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,-20*(.5+sine-animStart))*angles(rad(20),0,0),.25)
+				if neckSnap then
+					Neck.C0 = DefaultsNeckC0
+					neckSnap = false
+				else
+					Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+				end
+				if mrandom(15) == 1 then
+					Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+					neckSnap = true
+				end
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80+5*cos(TimingSine/25)),0,rad(45))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-0,-1)*angles(0,rad(170),rad(-10)),.25)
+				LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(20),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+				RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+				LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+			end
+			twait(0.5)
+			if flycf then
+				flycf=newcf
+				flypos=newpos
+			end
+			charcf=newcf
+			setCfr(newcf)
+
+			twait(0.5)
+			animStart=sine
+
+			animOverwrite=function()
+				RootJoint.C0 = Lerp1(RootJoint.C0,DefaultsRootJointC0*cf(0,0,(-sin(TimingSine/25))-(10-(sine-animStart)*20))*angles(rad(20),0,0),.25)
+				if neckSnap then
+					Neck.C0 = DefaultsNeckC0
+					neckSnap = false
+				else
+					Neck.C0 = Lerp1(Neck.C0,DefaultsNeckC0,.25)
+				end
+				if mrandom(15) == 1 then
+					Neck.C0 = DefaultsNeckC0*angles(rad(mrandom(-20,20)),rad(mrandom(-20,20)),rad(mrandom(-20,20)))
+					neckSnap = true
+				end
+				RightShoulder.C0 = Lerp1(RightShoulder.C0,cf(3,1,0)*angles(rad(80+5*cos(TimingSine/25)),0,rad(45))*DefaultsRightShoulderC0,.25)
+				Sword.C0 = Lerp1(Sword.C0,cf(0,-0,-1)*angles(0,rad(170),rad(-10)),.25)
+				LeftShoulder.C0 = Lerp1(LeftShoulder.C0,cf(-3,1,0)*angles(rad(20),0,rad(-10-10*cos(TimingSine/25)))*DefaultsLeftShoulderC0,.25)
+				RightHip.C0 = Lerp1(RightHip.C0,cf(2,-2,0)*angles(rad(-20),rad(80),rad(10+10*cos(TimingSine/25))),.25)
+				LeftHip.C0 = Lerp1(LeftHip.C0,cf(-2,-2,0)*angles(rad(-10),rad(-80),rad(-10-10*cos(TimingSine/25))),.25)
+			end
+			twait(0.5)
+			setWalkSpeed(32)
+			attacking=false
+		end
+	end
+
+	local animations1=function()
+		animations(true)
+	end
+	local animations0=function()
+		animations(false)
+	end
+	local lastmode="default"
+	t.addmode("default",{
+		modeEntered=function()
+			onKeyPressed(lastmode)
+			lastmode="default"
+		end,
+		idle=animations1,walk=animations1,jump=animations0,fall=animations0
+	})
+	t.addmode("z",{
+		modeEntered=function()
+			onKeyPressed("z")
+			lastmode="z"
+		end,
+		idle=animations1,walk=animations1,jump=animations0,fall=animations0
+	})
+	t.addmode("x",{
+		modeEntered=function()
+			onKeyPressed("x")
+			lastmode="x"
+		end,
+		idle=animations1,walk=animations1,jump=animations0,fall=animations0
+	})
+	t.addmode("f",{
+		modeEntered=function()
+			onKeyPressed("f")
+			lastmode="f"
+		end,
+		idle=animations1,walk=animations1,jump=animations0,fall=animations0
+	})
+end)
+
+btn("goofy trolus (goofy)", function()
+	local t=reanimate()
+	if type(t)~="table" then return end
+	local velbycfrvec=t.velbycfrvec
+	local raycastlegs=t.raycastlegs
+	local getJoint=t.getJoint
+	local RootJoint=getJoint("RootJoint")
+	local RightShoulder=getJoint("Right Shoulder")
+	local LeftShoulder=getJoint("Left Shoulder")
+	local RightHip=getJoint("Right Hip")
+	local LeftHip=getJoint("Left Hip")
+	local Neck=getJoint("Neck")
+	t.addmode("default", {
+		idle = function()
+			local rY, lY = raycastlegs()
+
+			RightShoulder.C0 = Lerp(RightShoulder.C0,cfMul(cf(1, 0.5, 0),angles(0.6981317007977318 * sin((sine + 0.5) * 4), 1.5707963267948966 - 0.3490658503988659 * sin(sine * 4), 0)),deltaTime) 
+			LeftShoulder.C0 = Lerp(LeftShoulder.C0,cfMul(cf(-1, 0.5, 0),angles(0.6981317007977318 * sin((sine + 0.5) * 4), -1.5707963267948966 + 0.3490658503988659 * sin(sine * 4), 0)),deltaTime) 
+			RightHip.C0 = Lerp(RightHip.C0,cfMul(cf(1, -1 + rY, 0),angles(1.5707963267948966 - 1.0471975511965976 * sin(sine * 4), 1.6580627893946132, -1.5707963267948966)),deltaTime) 
+			RootJoint.C0 = Lerp(RootJoint.C0,cfMul(cf(0, -0.2 + 0.2 * sin((sine + 1) * 8), 0),angles(-1.5707963267948966 + 0.6981317007977318 * sin(sine * 4), 0, 3.141592653589793)),deltaTime) 
+			LeftHip.C0 = Lerp(LeftHip.C0,cfMul(cf(-1, -1 + lY, 0),angles(1.5707963267948966 - 1.0471975511965976 * sin(sine * 4), -1.6580627893946132, 1.5707963267948966)),deltaTime) 
+			Neck.C0 = Lerp(Neck.C0,cfMul(cf(0, 1, 0),angles(-1.5707963267948966 - 0.8726646259971648 * sin((sine + 0.25) * 4), 0, 3.141592653589793)),deltaTime) 
+			--RightArm,1,0,0,4,0,40,0.5,4,0.5,0,0,4,90,-20,0,4,0,0,0,4,0,0,0,4,LeftArm,-1,0,0,4,-0,40,0.5,4,0.5,0,0,4,-90,20,0,4,0,0,0,4,0,0,0,4,RightLeg,1,0,0,4,90,-60,0,4,-1,0,0,4,95,0,0,4,0,0,0,4,-90,0,0,4,Torso,0,0,0,4,-90,40,0,4,-0.2,0.2,1,8,-0,0,0,4,0,0,0,4,180,0,0,4,LeftLeg,-1,0,0,4,90,-60,0,4,-1,0,0,4,-95,0,0,4,0,0,0,4,90,0,0,4,Head,0,0,0,4,-90,-50,0.25,4,1,0,0,4,-0,0,0,4,0,0,0,4,180,0,0,4,CPlusPlusTextbook_Handle,8.658389560878277e-09,0,0,4,0,0,0,4,-0.25,0,0,4,0,0,0,4,-0.0002722442150115967,0,0,4,0,0,0,4
+		end,
+		walk = function()
+			local fw, rt = velbycfrvec()
+
+			Neck.C0 = Lerp(Neck.C0,cfMul(cf(0, 1, 0),angles(-1.5707963267948966 + 0.5235987755982988 * sin((sine + 0.45) * 8), 0, 3.141592653589793)),deltaTime) 
+			RightShoulder.C0 = Lerp(RightShoulder.C0,cfMul(cf(1, 0.5, 0),angles(2.0943951023931953 - 1.7453292519943295 * sin((sine - 0.1) * 4), 1.9198621771937625, -1.5707963267948966)),deltaTime) 
+			RootJoint.C0 = Lerp(RootJoint.C0,cfMul(cf(0, 0.25 + 0.5 * sin((sine - 0.125) * 8), 0),angles(-1.5707963267948966 + 0.17453292519943295 * sin(sine * 8), 0, 3.141592653589793)),deltaTime) 
+			LeftHip.C0 = Lerp(LeftHip.C0,cfMul(cf(-1, -1 - 1 * sin(sine * 4), 0),angles(1.5707963267948966 - 1.2217304763960306 * sin((sine - 0.15) * 4) * fw, -1.5707963267948966 - 0.6108652381980153 * sin((sine - 0.15) * 4) * rt, 1.5707963267948966)),deltaTime) 
+			RightHip.C0 = Lerp(RightHip.C0,cfMul(cf(1, -1 + 1 * sin(sine * 4), 0),angles(1.5707963267948966 + 1.2217304763960306 * sin((sine - 0.15) * 4) * fw, 1.5707963267948966 + 0.6108652381980153 * sin((sine - 0.15) * 4) * rt, -1.5707963267948966)),deltaTime) 
+			LeftShoulder.C0 = Lerp(LeftShoulder.C0,cfMul(cf(-1, 0.5, 0),angles(2.0943951023931953 + 1.7453292519943295 * sin((sine - 0.1) * 4), -1.7453292519943295, 1.5707963267948966)),deltaTime) 
+			--Head,0,0,0,4,-90,30,0.45,8,1,0,0,4,-0,0,0,4,0,0,0,4,180,0,0,4,CPlusPlusTextbook_Handle,8.658389560878277e-09,0,0,4,0,0,0,4,-0.25,0,0,4,0,0,0,4,-0.0002722442150115967,0,0,4,0,0,0,4,RightArm,1,0,0,4,120,-100,-0.1,4,0.5,0,0,4,110,0,0,4,0,0,0,4,-90,0,0,4,Torso,0,0,0,4,-90,10,0,8,0.25,0.5,-0.125,8,-0,0,0,4,0,0,0,4,180,0,0,4,LeftLeg,-1,0,0,4,90,-70,-0.15,4,-1,-1,0,4,-90,-35,-0.15,4,0,0,0,4,90,0,0,4,RightLeg,1,0,0,4,90,70,-0.15,4,-1,1,0,4,90,35,-0.15,4,0,0,0,4,-90,0,0,4,LeftArm,-1,0,0,4,120,100,-0.1,4,0.5,0,0,4,-100,0,0,4,0,0,0,4,90,0,0,4
+		end
+	})
+end)
+lbl("^^^ By HackerMan Hub Team ^^^").TextColor3=c3(0,0.5,0)
+lbl("verison = 1").TextColor3=c3(1,1,1)
+lbl("Misc").TextColor3=c3(1,1,1)
+btn("empty reanimate (no animations)", reanimate).TextColor3=c3(0.6,0,0)
+
+btn("Destroy UI",function()
+	i1:Destroy()
+    i2:Destroy()
+    i3:Destroy()
+    i4:Destroy()
+    i5:Destroy()
+    i6:Destroy()
+    i7:Destroy()
+    i8:Destroy()
+    i9:Destroy()
+    stopreanimate()
+end).TextColor3=c3(0.8,0,0)
+
+btn("Rejoin Game",function()
+	local ts = game:GetService("TeleportService")
+	local p = game:GetService("Players").LocalPlayer
+	ts:Teleport(game.PlaceId, p)
+end).TextColor3=c3(0.8,0,0)
+
+btn("Reset True char",function()
+	stopreanimate()
+end).TextColor3=c3(0.8,0,0)
+
+insSet(btn("stop animation",stopreanimate),"TextColor3",c3(1,0,0))
+
+lbl("--------------------SETTINGS (REANIMATE TO APPLY)--------------------")
+
+local swtc=function(txt,options,onchanged)
+	local current=0
+	local swtcbtn=nil
+	local btnpressed=function()
+		current=current+1
+		if current>#options then
+			current=1
+		end
+		local option=options[current]
+		insSet(swtcbtn,"Text",txt..": "..option.text)
+		onchanged(option.value)
+	end
+	swtcbtn=btn("change",btnpressed)
+	btnpressed()
+	return swtcbtn
+end
+
+swtc("client sided placeholders",{
+	{value=true,text="yes"},
+	{value=false,text="no"}
+},function(v)
+	placeholders=v
+end)
+
+swtc("highlight fling targets",{
+	{value=true,text="yes"},
+	{value=false,text="no"}
+},function(v)
+	highlightflingtargets=v
+end)
+
+swtc("allow shiftlock",{
+	{value=true,text="yes"},
+	{value=false,text="no"}
+},function(v)
+	allowshiftlock=v
+end)
+
+swtc("ctrl click tp",{
+	{value=true,text="yes"},
+	{value=false,text="no"}
+},function(v)
+	ctrltp=v
+end)
+
+swtc("click fling",{
+	{value=true,text="yes"},
+	{value=false,text="no"}
+},function(v)
+	clickfling=v
+end)
+
+swtc("fling enhancements",{
+	{value=3,text="all"},
+	{value=1,text="changestate physics"},
+	{value=2,text="disable sitting"},
+	{value=0,text="none"},
+},function(v)
+	flingchangestate=v
+end)
+
+swtc("respawn tp",{
+	{value=3,text="hide body"},
+	{value=0,text="stay at spawn"},
+	{value=1,text="random tp close"},
+	{value=4,text="200 under the map"},
+	{value=5,text="200 above the map"},
+	{value=2,text="behind char"}
+},function(v)
+	respawntp=v
+end)
+
+local disguiscripts=nil
+swtc("new gui scripts",{
+	{value=true,text="disable"},
+	{value=false,text="keep"}
+},function(v)
+	disguiscripts=v
+end)
+Connect(insGet(pg,"DescendantAdded"),function(v)
+	if c and disguiscripts and IsA(v,"Script") then --mind Enum.RunContext.Client
+		insSet(v,"Disabled",true) 
+	end
+end)
+
+swtc("new character scripts",{
+	{value=function(v)
+		if IsA(v,"Script") then --mind Enum.RunContext.Client
+			insSet(v,"Disabled",true)
+		end
+	end,text="disable"},
+	{value=false,text="keep"}
+},function(v)
+	discharscripts=v
+end)
+
+swtc("breakjoints",{
+	{value=1,text="breakjoints+health"},
+	{value=2,text="health or breakjoints"},
+	{value=3,text="breakjoints"}
+},function(v)
+	breakjointsmethod=v
+end)
+
+swtc("coregui death effect",{
+	{value=true,text="disable"},
+	{value=false,text="dont modify"},
+},function(v)
+	hidedeatheffect=v
+end)
+
+swtc("set simulation radius",{
+	{value=true,text="yes"},
+	{value=false,text="no"},
+},function(v)
+	simrad=v
+end)
+
+if replicatesignal then
+	local i11=i("Frame")
+	local i12=i("UIListLayout")
+	local i13=i("Frame")
+	local i14=i("UIListLayout")
+
+	insSet(i11,"Name",rs())
+	insSet(i11,"AnchorPoint",v2(0.5,0.5))
+	insSet(i11,"AutomaticSize",e.AutomaticSize.XY)
+	insSet(i11,"BackgroundTransparency",1)
+	insSet(i11,"Position",u2(0.5,0,0.5,0))
+	insSet(i11,"Size",u2(1,0,0,0))
+	insSet(i12,"Name",rs())
+	insSet(i12,"SortOrder",e.SortOrder.LayoutOrder)
+	insSet(i12,"Parent",i11)
+	insSet(i13,"Name",rs())
+	insSet(i13,"AutomaticSize",e.AutomaticSize.Y)
+	insSet(i13,"BackgroundTransparency",1)
+	insSet(i13,"Size",u2(0.5,0,0,0))
+	insSet(i14,"Name",rs())
+	insSet(i14,"FillDirection",e.FillDirection.Horizontal)
+	insSet(i14,"SortOrder",e.SortOrder.LayoutOrder)
+	insSet(i14,"Parent",i13)
+
+	local s=i4
+	i4=i11
+	lbl("Use permadeath?")
+	lbl("(detectable with no false positives)")
+	lbl("This executor supports permadeath.")
+	lbl("permadeath preload method")
+	insSet(i13,"Parent",i11)
+	i4=i13
+	btn("No",function()
+		replicatesignal=nil
+		Destroy(i11)
+		lbl("permadeath disabled")
+		insSet(i4,"Parent",i3)
+		pdloadedtime=nil
+	end)
+	btn("Yes",function()
+		Destroy(i11)
+		lbl("permadeath enabled")
+		insSet(i4,"Parent",i3)
+		replicatesignal(cdsb)
+		pdloadedtime=osclock()+rst
+		local lastc=nil
+		local hdied=function()
+			if not c then
+				replicatesignal(cdsb)
+				pdloadedtime=osclock()+rst
+			end
+		end
+		Connect(GetPropertyChangedSignal(lp,"Character"),function()
+			local c=lp.Character
+			if c and c~=lastc then
+				lastc=c
+				replicatesignal(cdsb)
+				pdloadedtime=osclock()+rst
+				while lastc==c do
+					local h=FindFirstChildOfClass(c,"Humanoid")
+					if h then
+						Connect(insGet(h,"Died"),hdied)
+						break
+					end
+					Wait(preanimation)
+				end
+			end
+		end)
+	end)
+	i4=s
+
+	insSet(i11,"Parent",i3)
+	insSet(i4,"Parent",nil)
+else
+	lbl("permadeath unsupported")
+end
+
+if not pcall(insSet,i10,"Parent",FindFirstChildOfClass(game,"CoreGui")) then
 	insSet(i7,"Text","PLAYERGUI MODE")
 	insSet(i10,"Parent",pg)
 	twait(3)
 	insSet(i7,"Text",guiTheme.guiTitle)
 end
+
 print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
 print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
 print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
