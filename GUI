@@ -98,7 +98,7 @@ CREDITS :D
 			Update Title/Msg
 			  {UPDATE V12}
 		THE PATCHMA UPDATE / TEST UPDATE
-patchma hub got a update from v43 to v44 and hackerman hub just updated to it have fun perma death is only working for a few executors
+patchma hub got a update from v43 to v44 (now its v45 due to a bug in v44) and hackerman hub just updated to it have fun perma death is only working for a few executors
 there is a list of executors above in hackerman hub info
 
 something new "ban hammer test" is now no longer hidden + "the classics" is no longer hidden too + "hackerman" mod is no longer hidden
@@ -161,7 +161,7 @@ we added some cool text to the code just so if you go looking around you know wh
 > added new black arms/legs/torso rig
 > added new white arms/legs rig
 	update v12
-! updated to patchma v44
+! updated to patchma v44 (v45 bc v44 had a bug with fling)
 ! updated our hidden scripts
 ^ changed so their no longer hidden
 ? fix small rig problems
@@ -384,6 +384,9 @@ local accessorylimbs={
 
 	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Arm"},
 	{meshid="125405780718494",textureid="136752500636691",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Arm"},
+
+	{meshid="12344199833",textureid="12344199857",C0=cfMul(angles(0,10,0),cf(90,0.3,0)),Name="Left Arm"},
+	{meshid="12344198891",textureid="12344198908",C0=cfMul(angles(0,10,0),cf(90,0.3,0)),Name="Right Arm"},
 
 	{meshid="90736849096372",textureid="79186624401216",C0=angles(rad(0),rad(0),rad(-90)),Name="Left Leg"},
 	{meshid="105141400603933",textureid="71060417496309",C0=angles(rad(0),rad(0),rad(-90)),Name="Right Leg"},
