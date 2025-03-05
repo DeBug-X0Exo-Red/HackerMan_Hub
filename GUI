@@ -737,8 +737,8 @@ end
 
 Draggable(i1)
 
-lbl("by MyWorld")
-lbl("discord.gg/QMy5f6DrbH")
+lbl("patchma hub by MyWorld")
+lbl("HackerMan Hub (HMH) by debug-x team")
 
 local allowshiftlock=nil
 local ctrltp=nil
@@ -766,7 +766,7 @@ end
 local reanimate=function()
 	--[[
 		FDless reanimate by MyWorld
-		optimize the optimized
+		optimize the optimized discord.gg/QMy5f6DrbH
 	]]
 
 	local novoid = true --prevents parts from going under workspace.FallenPartsDestroyHeight if you control them
