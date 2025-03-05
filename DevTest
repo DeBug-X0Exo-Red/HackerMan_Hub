@@ -1,5 +1,5 @@
 print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
-print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" (•-•)  ~ ♡  HackerMan Hub / Dev0 ♡")
 print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
 warn[[ by debug-x team we have updated many animations and animation hubs to the newest version of patchma aka version v43
 btw new legs and arms from genesis will be added with time noob rig works
@@ -347,7 +347,7 @@ local Inverse=cfGet(cf_0,"Inverse")
 local Lerp=cfGet(cf_0,"Lerp")
 
 local guiTheme={
-	guiTitle="HackerMan Hub",
+	guiTitle="HackerMan Hub DevTest",
 	windowTitleColor=c3(0,0.5,0),
 	windowTopColor=c3(0,0,0),
 	windowBottomColor=c3(1,1,1),
@@ -1219,6 +1219,66 @@ local reanimate=function()
 						insSet(hrp,"AssemblyLinearVelocity",v3_0)
 						insSet(hrp,"AssemblyAngularVelocity",v3_0)
 						twait(0.17)
+						elseif respawntp ==4 then
+							local startpos = pos + v3(mrandom(-32, 32), 0, mrandom(-32, 32))
+							local dir = nil
+							local poscheck = true
+							while poscheck do
+								poscheck = false
+								for i, v in next, rootparts do
+									local diff = (startpos - insGet(v, "Position")) * v3_101
+									if v3Get(diff, "Magnitude") < 10 then
+				    				poscheck = true
+				   					dir = dir or (v3Get(diff, "Unit") * 3)
+				   					startpos = startpos + dir
+			  					end
+							 end
+							 local diff = (startpos - pos) * v3_101
+		 					if v3Get(diff, "Magnitude") < 10 then
+			 				poscheck = true
+			  				dir = dir or (v3Get(diff, "Unit") * 3)
+			  				startpos = startpos + dir
+		 				end
+					end
+
+					-- adds or subracts X amount units to the y-coord
+					startpos = startpos + v3(0, -200, 0)
+
+						startpos = cfAdd(cfGet(cfr, "Rotation"), startpos)
+						insSet(hrp, "CFrame", startpos)
+						insSet(hrp, "AssemblyLinearVelocity", v3_0)
+						insSet(hrp, "AssemblyAngularVelocity", v3_0)
+						twait(0.2501)
+						elseif respawntp ==5 then
+							local startpos = pos + v3(mrandom(-32, 32), 0, mrandom(-32, 32))
+							local dir = nil
+							local poscheck = true
+							while poscheck do
+								poscheck = false
+								for i, v in next, rootparts do
+									local diff = (startpos - insGet(v, "Position")) * v3_101
+									if v3Get(diff, "Magnitude") < 10 then
+				    				poscheck = true
+				   					dir = dir or (v3Get(diff, "Unit") * 3)
+				   					startpos = startpos + dir
+			  					end
+							 end
+							 local diff = (startpos - pos) * v3_101
+		 					if v3Get(diff, "Magnitude") < 10 then
+			 				poscheck = true
+			  				dir = dir or (v3Get(diff, "Unit") * 3)
+			  				startpos = startpos + dir
+		 				end
+					end
+
+					-- adds or subracts X amount units to the y-coord
+					startpos = startpos + v3(0, 200, 0)
+
+						startpos = cfAdd(cfGet(cfr, "Rotation"), startpos)
+						insSet(hrp, "CFrame", startpos)
+						insSet(hrp, "AssemblyLinearVelocity", v3_0)
+						insSet(hrp, "AssemblyAngularVelocity", v3_0)
+						twait(0.2501)
 					elseif respawntp==2 then
 						insSet(hrp,"CFrame",cfAdd(cfr,cfGet(cfr,"RightVector")*3.5-cfGet(cfr,"LookVector")*3.5))
 						insSet(hrp,"AssemblyLinearVelocity",v3_0)
@@ -22451,6 +22511,8 @@ swtc("respawn tp",{
 	{value=3,text="hide body"},
 	{value=0,text="stay at spawn"},
 	{value=1,text="random tp close"},
+	{value=4,text="200 under the map"},
+	{value=5,text="200 above the map"},
 	{value=2,text="behind char"}
 },function(v)
 	respawntp=v
@@ -22587,5 +22649,5 @@ if not pcall(insSet,i10,"Parent",FindFirstChildOfClass(game,"CoreGui")) then
 end
 
 print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
-print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" (•-•)  ~ ♡  HackerMan Hub / Dev0 ♡")
 print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
