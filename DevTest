@@ -199,6 +199,8 @@ game.StarterGui:SetCore("SendNotification", {
 	})
 
 --no need to get and index the library tables with function names every time the script uses themlocal osclock=os.clock
+game=workspace.Parent
+local osclock=os.clock
 local tspawn=task.spawn
 local twait=task.wait
 local schar=string.char
