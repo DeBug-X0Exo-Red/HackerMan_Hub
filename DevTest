@@ -348,10 +348,10 @@ local Inverse=cfGet(cf_0,"Inverse")
 local Lerp=cfGet(cf_0,"Lerp")
 
 local guiTheme={
-	guiTitle="HackerMan Hub DevTest",
+	guiTitle="HackerMan Hub",
 	windowTitleColor=c3(0,0.5,0),
 	windowTopColor=c3(0,0,0),
-	windowBottomColor=c3(1,1,1),
+	windowBottomColor=c3(0.3,0.3,0.3),
 	windowMinimizedSize={X=270,Y=22},
 	windowRegularSize={X=270,Y=390},
 	buttonsTextColor=c3(0.4,0.4,0.4),
