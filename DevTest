@@ -57,10 +57,10 @@ https://discord.gg/nTsT3WD7Zm
 	sword: 17326812233,17326800544
 =======================================================================================================================================
     HackerMan Hub Info
-DevInfo Version > Err43
-patchma Version > v43
-Hub Version > v10
-Animations > 75+
+DevInfo Version > HaxeR
+patchma Version > v44
+Hub Version > v12
+Animations > 80+
 Makers of Hub > DeBug-X Team
 
 executors that have PermaDeath (updated 3/4/25)
@@ -189,6 +189,7 @@ more fixed versions of animations with offsale/del items
 some other things
 ]]
 
+warn[[ the updated rigs are gone for a bit due to patchma hub being bugged will come back soon for now only using the normal patchma rigs ]]
 --      :::    :::           :::        ::::::::       :::    :::       ::::::::::       :::::::::         :::   :::           :::        ::::    :::           :::    :::      :::    :::       ::::::::: 
 --     :+:    :+:         :+: :+:     :+:    :+:      :+:   :+:        :+:              :+:    :+:       :+:+: :+:+:        :+: :+:      :+:+:   :+:           :+:    :+:      :+:    :+:       :+:    :+: 
 --    +:+    +:+        +:+   +:+    +:+             +:+  +:+         +:+              +:+    +:+      +:+ +:+:+ +:+      +:+   +:+     :+:+:+  +:+           +:+    +:+      +:+    +:+       +:+    +:+  
@@ -409,6 +410,7 @@ local accessorylimbs={
 	{meshid="3030546036",textureid="3409604993",C0=angles(-1.6144295580947547,1.5707963267948966,0)*cf(0.125,0.3,0),Name="Right Leg"},
 	{meshid="4819720316",textureid="4819722776",C0=angles(0,0,0.2617993877991494),Name="Torso"}
 }
+
 
 local gp=function(p,n,cl)
 	for i,v in next,GetChildren(p) do
@@ -1668,9 +1670,9 @@ local reanimate=function()
 		if (not targetpart) or (flingtable[targetpart]~=nil) then
 			return false
 		end
-		replicatesignal(cdsb)
-		twait(0.5)
-		replicatesignal(cdsb)
+		if replicatesignal then
+		    replicatesignal(cdsb)
+		end
 		if highlightflingtargets then
 			local h=i("Highlight")
 			insSet(h,"Name",rs())
