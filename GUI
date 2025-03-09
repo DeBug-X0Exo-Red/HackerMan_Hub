@@ -721,6 +721,8 @@ Draggable(i1)
 
 lbl("patchma hub by MyWorld")
 lbl("HackerMan Hub (HMH) by debug-x team")
+lbl("BTW HIT F9 ON YOUR KEYBORAD")
+lbl("THE ROBLOX CONSOLE HAS INFO IN IT IN YELLOW TEXT")
 
 local allowshiftlock=nil
 local ctrltp=nil
