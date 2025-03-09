@@ -1,9 +1,8 @@
 print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
-print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" (•-•)  ~ ♡  Patchma Hub / User ♡")
 print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
-warn[[ by debug-x team we have updated many animations and animation hubs to the newest version of patchma aka version v45 
-and make fixes for them if their hats are offsale or del and make our own animations time to time
-runs on patchma what else?
+warn[[ by script by MyWorld and the team behind Patchma Hub 
+LoadString convert by Debug-X Team/HackerMan Hub Team
 =======================================================================================================================================
 HackerMan Hub's YouTube
 https://www.youtube.com/@HackerManHub
@@ -55,7 +54,20 @@ CREDITS :D
 > MyWorld        | Animator & Coder & Tester | Creator of patchma hub
 > Emper          | Animator & Coder & Tester | Helper who continued patchma hub for a temp time 
 =======================================================================================================================================
-                        update logs
+                        update logs (not done
+  	  update v44
+> added permadeath (but better cuz its preload so u dont wait for it to load or wait less),
+! updated antisleep (less visible, more stable),
+optimized much,
+fixed velocity solver bug,
+fixed gui dragging bug when gui tiems are being removed,
+added option to block sitting when flinging
+  	  update v45
+fixed fling when u dont have permadeath because i broke it
+and aligned those rigs for IL snice the previous is offsale
+121668589285446,80629770394501,127671621543010,76687571475377,120230112701079
+or
+132908702618809,122975605535029,115313441748457,127208207296576,131203955709755
   	  update v46
 tiny optimization, removed unused variables, fixed align bug in IL (that the depending on what accessories load first it would align differently but now is fixed) 
 =======================================================================================================================================
