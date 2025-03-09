@@ -1,32 +1,88 @@
---[[
-	patchma hub by MyWorld
-	lets get the party started
-
-	IDs of paid accessories:
-
-	-for arms 11159410305,11263254795 or 14255556501,14255554762 or 12344545199,12344591101 or 13839976999,13831200263
-
-	-for legs 14768693948,14768701869 or 11159483910,12652786974 or 17401151565,17387616772
-
-	-for torso 14255528083 or 13421786478 or 14768678294
+print("  /)/)  ~ ┏━━━━━━━━━━━━━━━━━┓")
+print(" (•-•)  ~ ♡  HackerMan Hub / User ♡")
+print(" /づ づ  ~ ┗━━━━━━━━━━━━━━━━━┛")
+warn[[ by debug-x team we have updated many animations and animation hubs to the newest version of patchma aka version v45 
+and make fixes for them if their hats are offsale or del and make our own animations time to time
+runs on patchma what else?
+=======================================================================================================================================
+HackerMan Hub's YouTube
+https://www.youtube.com/@HackerManHub
+https://www.youtube.com/watch?v=nxFfGj7-T_M
+HackerMan Hub's Discord
+https://discord.gg/nTsT3WD7Zm
+=======================================================================================================================================
+	IDs of paid body accessories:
+	-for arms and are in sets of 2 > 11159410305,11263254795 / 14255556501,14255554762 / 12344545199,12344591101 / 13839976999,13831200263
+	-for legs and are in sets of 2 > 14768693948,14768701869 / 11159483910,12652786974 / 17401151565,17387616772
+	-for torso 14255528083 / 13421786478 / 14768678294
 
 	or anything else that covers ur torso. examples:
 	14532301415,13423624885,11502853991,14053485259,13779879140,14443132226,17163407577,16297156693,17180496303,17171230401
-	can be same stuff but different colors
 
-	there are 156 ways to make a rig with the ids above
-
-	IDs of free accessories:
+	IDs of free body accessories:
 	3033910400,3409612660,3438342658,3398308134,4324158403,3822880197,4154538250,3443038622,4819740796
-
+=======================================================================================================================================
 	accessories for Immortality Lord:
-	head: 17375337078 or 17270164442 or 105058659622112
-	body: 121668589285446,80629770394501,127671621543010,76687571475377,120230112701079
-	or 132908702618809,122975605535029,115313441748457,127208207296576,131203955709755
-	or 17270178857,17270001635,17269952801,17269983359,17269998373
+	head: 17375337078 or 17270164442
+	body: 17270178857,17270001635,17269952801,17269983359,17269998373
 	wings: 17270231731,17270225913
 	sword: 17326812233,17326800544
+=======================================================================================================================================
+    Patchma Hub Info
+DevInfo Version > Patchma
+patchma Version > v46
+Animations > 9
+Makers of Hub > Patchma Hub Team
+LoadString Converter Team > Debug-X Team
+
+executors that have PermaDeath (updated 3/4/25)
+---------------------------------------------------------------------------------------------------------------------------------------
+synapse z (is down)
+delta (only ios rn)
+frostware android gg/getfrost
+nebula android gg/9Hm7p7hE 
+=======================================================================================================================================
+CREDITS :D
+    DeBug-x Team / HackerMan Team / 18 animations used
+> Redactedre     debug-x team | alt account | never use probably lol
+> toya           debug-x team | emotional support pet | is a cat
+> DeBug-Cookie   debug-x team | Tester | she does nothing other then that lmao
+> Exotic         debug-x team | Animator & Tester | not the name of main nor main alt but i just go by that and it has more hats on this account > 
+> DeBug-X        debug-x team | Coder | alt alt account what i use alot | i do a lot of coding on this account 
+> DeBug-Z        debug-x team | Coder & Tester | alt friend uses she helped a bit she added like 5 lines of code lmao
+    Patchma Hub Team / for Patchma hub itself / 8 animations used
+> Fox            | Maker of the watered down version of MyWorld's place
+> MyWorld        | Animator & Coder & Tester | Creator of patchma hub
+> Emper          | Animator & Coder & Tester | Helper who continued patchma hub for a temp time 
+=======================================================================================================================================
+                        update logs
+  	  update v46
+tiny optimization, removed unused variables, fixed align bug in IL (that the depending on what accessories load first it would align differently but now is fixed) 
+=======================================================================================================================================
 ]]
+
+--      :::::::::     ::: ::::::::::: ::::::::  :::    :::   :::   :::       :::            :::    ::: :::    ::: ::::::::: 
+--     :+:    :+:  :+: :+:   :+:    :+:    :+: :+:    :+:  :+:+: :+:+:    :+: :+:          :+:    :+: :+:    :+: :+:    :+: 
+--    +:+    +:+ +:+   +:+  +:+    +:+        +:+    +:+ +:+ +:+:+ +:+  +:+   +:+         +:+    +:+ +:+    +:+ +:+    +:+  
+--   +#++:++#+ +#++:++#++: +#+    +#+        +#++:++#++ +#+  +:+  +#+ +#++:++#++:        +#++:++#++ +#+    +:+ +#++:++#+    
+--  +#+       +#+     +#+ +#+    +#+        +#+    +#+ +#+       +#+ +#+     +#+        +#+    +#+ +#+    +#+ +#+    +#+    
+-- #+#       #+#     #+# #+#    #+#    #+# #+#    #+# #+#       #+# #+#     #+#        #+#    #+# #+#    #+# #+#    #+#     
+--###       ###     ### ###     ########  ###    ### ###       ### ###     ###        ###    ###  ########  #########       
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "HackerMan Hub aka DeBug-X / DISCORD SERVER IS HERE!!!";
+	Text = "IN THE CONSOLE TOO HIT F9 > https://discord.gg/nTsT3WD7Zm < JOIN NOW";
+	Icon = "http://www.roblox.com/asset/?id=116575803526703";
+	Duration = "10"
+
+	})
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Patchma Hub Loaded";
+	Text = "Made By MyWorld and the Team behind it > check console for more info";
+	Duration = "60"
+
+	})
 
 --no need to get and index the library tables with function names every time the script uses them
 local osclock=os.clock
