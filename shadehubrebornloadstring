@@ -1,3 +1,4 @@
+game=workspace.Parent
 local plrs=game:FindFirstChildOfClass("Players")
 local rs=game:FindFirstChildOfClass("RunService")
 local ws=game:FindFirstChildOfClass("Workspace")
