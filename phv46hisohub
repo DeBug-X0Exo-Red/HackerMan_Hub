@@ -508,8 +508,8 @@ end
 
 Draggable(i1)
 
-lbl("by MyWorld")
-lbl("discord.gg/QMy5f6DrbH")
+lbl("By: hiso")
+lbl("powered by patchma")
 
 local allowshiftlock=nil
 local ctrltp=nil
