@@ -158,16 +158,15 @@ local Inverse=cfGet(cf_0,"Inverse")
 local Lerp=cfGet(cf_0,"Lerp")
 
 local guiTheme={
-	guiTitle="patchma hub",
-	windowTitleColor=c3(0,0,1),
+	guiTitle="Hiso hub",
 	windowTopColor=c3(0,0,0),
-	windowBottomColor=c3(0,0,0.584314),
-	windowMinimizedSize={X=220,Y=22},
-	windowRegularSize={X=220,Y=290},
-	buttonsTextColor=c3(0.0941177,0.317647,0.878431),
-	labelsTextColor=c3(0.560784,0.560784,0.560784),
+	windowBottomColor=c3(0,0,0),
+	windowMinimizedSize=u2(0,290,0,22),
+	windowRegularSize=u2(0,290,0,520),
+	buttonsTextColor=c3(1,1,1),
+	labelsTextColor=c3(0.5,0.5,0.5),
 	listTopColor=c3(0,0,0),
-	listBottomColor=c3(0.0705882,0.0705882,0.0705882)
+	listBottomColor=c3(0.5,0,0)
 }
 
 local accessorylimbs={
