@@ -29,6 +29,7 @@
 ]]
 
 --no need to get and index the library tables with function names every time the script uses them
+game=workspace.Parent
 local osclock=os.clock
 local tspawn=task.spawn
 local twait=task.wait
